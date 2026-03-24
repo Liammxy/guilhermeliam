@@ -5,21 +5,45 @@
         <meta name="viewport" content="width-device-width">
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="icon" type="images/png" href="images/exxe.png">
     </head>
     <body>
-        <header>
-            <h1>Grime Life</h1>
-            <nav>
+        <header class="header">
+            
+            <div class="logo">
+                <img src="images/exxe.png" alt="EmojiLogo" class="logo-emoji">
+                GrimeLife
+            </div>
+
+            <nav class="menu">
                 <a href="#">Inicio</a>
                 <a href="#">Jogo</a>
                 <a href="#">Fotos</a>
                 <a href="#">Contato</a>
-                <button>Login</button>
+                <a href="#" class="entrada">Login</a>
             </nav>
         </header>
 
-        <main>
-            <section>
+        <main class="conteudo-principal">
+            <section class="arte-hero">
+                <img src="images/sapodoido.png" alt="Personagem GrimeLife" class="imagem-caos">
+                <div class="container-interacao">
+                <div class="balao-fala">
+                    <p>>>Tá olhando pro meu moletom? É a última coisa limpa nesse mundo sujo, não se acostuma</p>
+                </div>
+                <a href="#" class="botao-caos">>>EXPLORAR BECO</a>
+                </div>
+            </section>
+
+            <div class="painel-drones">
+                <div class="radar-ponto"></div>
+                <p>STATUS: VIGILÂNCIA ATIVA</p>
+                <P>DRONES: 03</p>
+            </div>
+
+            <div class="layout-split">
+            <section class="sobre">
                 <h2>Sobre o Jogo</h2>
                 <p>Grime Life é um jogo de exploração urbana em um mundo caótico, sujo e cheio de personalidade. Você joga como um jovem grafiteiro que vaga por uma cidade decadente dominada por concreto, poluição e personagens estranhos.</p>
 
@@ -31,9 +55,39 @@
 
                 <p>Grime Life é uma experiência livre, onde o objetivo principal é explorar, se expressar e aproveitar o caos urbano</p>
             </section>
+            <aside class="status-mundo">
+                <h3>SISTEMA_STATUS</h3>
+                <div class="status-item">
+                    <span>POLUIÇÃO</span>
+                    <div class="barra">
+                        <div class="progresso" style="width: 90%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="status-item">
+                    <span>VIGILÂNCIA</span>
+                    <div class="barra">
+                        <div class="progresso" style="width: 75%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="status-item">
+                    <span>CONCRETO</span>
+                    <div class="barra">
+                        <div class="progresso" style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+                <p class="alerta">AVISO: AR IMPRÓPRIO</p>
 
-            <section>
-                <button>Jogue aqui</button>
+                <div class="log-grime">
+                    <h3>NOTÍCIAS__LIXO</h3>
+                    <p>> [INFO] Alguém roubou o cigarro do Bituca de novo.</p>
+                    <p>> [ALERTA] 40% de chance de chuva de graxa hoje.</p>
+                    <p>> [DICA] Não lamba as paredes do beco 4. Confia.</p>
+                    <p>> [ALERTA] Nuvem de spray tóxico detectada no Setor Sul. Use máscara ou prenda a respiração por 20 minutos.</p>
+                </div>
+            </aside>
             </section>
         </main>
 
