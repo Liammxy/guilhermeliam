@@ -1,5 +1,13 @@
+html {
+    scroll-behavior: smooth;
+    min-height: 100%;
+    box-sizing: border-box;
+    border-left: 2px solid #31ff31;
+    border-right: 2px solid #31ff31;
+}
+
 body{
-    margin:0;
+    margin: 0;
     font-family: 'Space Mono' , monospace;
     line-height: 1.6;
     color: #31ff31;
@@ -10,11 +18,11 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    border-left: 2px solid #31ff31;
-    border-right: 2px solid #31ff31;
 }
 
 .header{
+    position: fixed;
+    top: 0;
     width:100%;
     display:flex;
     justify-content:space-between;
@@ -45,8 +53,10 @@ body{
   }
 
 .menu a{
-    margin-left:30px;
-    text-decoration:none;
+    display: inline-block;
+    margin-left: 30px;
+    padding: 5px 10px;
+    text-decoration: none;
     color: #31ff31;
     font-size:14px;
     transition:0.3s;
@@ -54,28 +64,54 @@ body{
 
 .menu a:hover{
     opacity: 1.5;
-    color: rgb(255, 255, 255);
+    color: #000;
+    box-shadow: 0 0 15px #ffff00;
+    background-color: #ffff00;
+    border-radius: 5px;
+    transform: scale(1.2);
 }
 
 .conteudo-principal {
-    max-width: 1000px;
+    max-width: 100%;
     margin: 40px;
+    margin-top: 200px;
     padding: 0 30px;
+}
+
+.ajusteprimeiraparte {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.coluna-central {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.coluna-radar {
+    font-family: 'Silkscreen', sans-serif;
+    border: 3px solid #31ff31;
+    background-color: #000;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(49, 255, 49, 0.4);
 }
 
 h2 {
     font-family: 'Silkscreen' , sans-serif;
 }
 
-.sobre p {
-    color: #a2fca2;
-    max-width: 800px;
-}
-
 .layout-split {
-    display: flex;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
     align-items: stretch;
+    margin-bottom: 100px;
 }
 
 .sobre {
@@ -88,6 +124,15 @@ h2 {
     font-family: 'Spacemono' , monospace;
     font-size: 1rem;
     line-height: 1.6;
+}
+
+#sobre-jogo {
+    scroll-margin: 130px;
+}
+
+.sobre p {
+    color: #a2fca2;
+    max-width: 800px;
 }
 
 .status-mundo {
@@ -125,15 +170,55 @@ h2 {
     font-size: 0.8rem;
 }
 
-.arte-hero {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 30px;
-    margin: 40px 0;
-    max-width: 500px;
-    position: relative;
-    padding-left: 50px;
+.conteudo-procurado {
+    flex: 1;
+    border: 1px solid #31ff31;
+    padding: 15px;
+    background-color: #111;
+    font-family: 'Spacemono' , monospace;
+}
+
+.conteudo-procurado h3 {
+    font-family: 'Silkscreen' , sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #31ff31;
+}
+
+.imagemcisne {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    border: 1px solid #31ff31;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.imagemcisne img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.perfil-criminoso {
+    font-family: "Spacemono" , monospace;
+    text-align: center;
+}
+
+.perfil-criminoso h2 {
+    font-size: 1.2rem;
+}
+
+.perfil-criminoso h4 {
+    font-family: 'Silkscreen' , sans-serif;
+    font-size: 1.2rem;
+}
+
+.vulgo {
+    color: #00ff00;
+    font-weight: bold;
+    text-shadow: 0 0 5px #00ff00;
 }
 
 .imagem-caos {
@@ -152,20 +237,11 @@ h2 {
     }
 }
 
-.container-interacao {
-    display: flex;
-    flex-direction: column; /* coloca um embaixo do outro*/
-    gap: 20px;
-    margin-left: -40px;
-    margin-top: 30px;
-}
-
 .balao-fala {
     position: relative;
     background-color: #000;
     border: 3px solid #31ff31;
     padding: 25px 30px;
-    min-width: 300px;
     max-width: 450px;
     box-shadow: 0 0 15px rgba(49, 255, 49, 0.4);
 }
@@ -181,44 +257,34 @@ h2 {
 
 .botao-caos {
     display: flex; /* faz o link se comportar como um bloco*/
-    border: 3px solid #31ff31;
-    color: #31ff31;
-    padding: 10px 20px;
+    width: 100%;
+    max-width: 450px;
+    height: 60px;
+    border: 3px solid #ff9900;
+    border-radius: 5px;
+    color: #000000;
     font-family: 'Silkscreen' , sans-serif;
+    font-size: 1.5rem;
     text-decoration: none;
     text-align: center;
     transition: 0.3s;
     align-items: center;
     justify-content: center;
-    height: 55px;
-    background-color: #000;
+    background-color: #ff9900;
+    box-shadow: 0 0 15px #ff9900;
 }
 
 .botao-caos:hover {
-    background: #31ff31;
-    color: #000;
+    background-color: #ffff00;
+    color: #000000;
+    border: 3px solid #ffff00;
+    box-shadow: 0 0 30px #ffff00;
+    transform: scale(1.05);
 }
 
-.painel-drones {
-    position: absolute;
-    top: 208px;
-    right: 150px;
-    border: 3px solid #31ff31;
-    padding: 30px;
-    background: #000;
-    color: #31ff31;
-    font-family: 'Silkscreen' , sans-serif;
-    font-size: 0.7rem;
-    text-align: center;
-    width: 300px;
-    box-shadow: 0 0 15px rgba(49, 255, 49, 0.4);
-    z-index: 100;
-}
-
-.painel-drones p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    margin: 10px 0;
+.botao-caos:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 10px #ffff00;
 }
 
 .radar-ponto {
@@ -226,7 +292,7 @@ h2 {
     height: 113px;
     border: 3px solid #31ff31;
     border-radius: 50%;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 20px;
     position: relative;
     overflow: hidden;
 }

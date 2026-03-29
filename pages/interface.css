@@ -1,0 +1,135 @@
+.container-jogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 150px;
+    padding: 40px;
+}
+
+.caixa-mensagem {
+    background-color: #1a1a1a;
+    border: 2px solid #31ff31;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 5px #31ff31;
+    max-width: 600px;
+}
+
+.caixa-mensagem h2 {
+    font-family: 'Silkscreen', sans-serif;
+    color: #31ff31;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.caixa-mensagem p {
+    font-family: 'Spacemono', monospace;
+    letter-spacing: 1px;
+    color: #a2fca2;
+}
+
+.caixa-jogo {
+    background-color: #1a1a1a;
+    border: 3px solid #31ff31;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    box-shadow: 0 0 20px #31ff31;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    scroll-margin-top: 200px;
+}
+
+.moldura-jogo {
+    text-align: center;
+    width: 100%;
+}
+
+.status-sistema {
+    color: #31ff31;
+    font-family: 'Spacemono', monospace;
+    font-size: 1rem;
+    margin-bottom: 40px;
+    text-shadow: 0 0 5px rgba(49, 255, 49, 0.7);
+}
+
+.botao-neon {
+    width: 100%;
+    max-width: 450px;
+    height: 60px;
+    background-color: #ff9900;
+    color: #000000;
+    border: 3px solid #ff9900;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0,3s;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #ff9900;
+}
+
+.botao-neon:hover {
+    background-color: #ffff00;
+    color: #000000;
+    border: 3px solid #ffff00;
+    box-shadow: 0 0 39px #ffff00;
+    transform: scale(1.05);
+}
+
+.botao-neon:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 10px #ffff00;
+}
+
+.caixa-informativa {
+    background-color: #1a1a1a;
+    border: 3px solid #31ff31;
+    border-radius: 10px;
+    width: 95%;
+    max-width: 1100px;
+    min-height: 250px;
+    padding: 30px;
+    box-shadow: 0 0 20px #31ff31;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-informativa h2 {
+    font-family: 'Silkscreen', sans-serif;
+    color: #31ff31;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    text-shadow: 0 0 5px rgba(49, 255, 49, 0.7);
+}
+
+.conteudo-informativo {
+    width: 100%;
+    max-width: 900px;
+    text-align: left;
+}
+
+.conteudo-informativo p {
+    color: #a2fca2;
+    font-family: 'Spacemono', monospace;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.conteudo-informativo p strong {
+    color: #ffff00;
+    text-shadow: 0 0 5px rgba(49, 255, 49, 0.7);
+}
