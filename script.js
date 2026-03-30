@@ -33,3 +33,24 @@ function aoMudarTela() {
         }
     }
 }
+
+// PARTE DO LOGIN
+function abrirLogin() {
+    document.getElementById("modal-login").style.display = "block";
+}
+
+function fecharLogin() {
+    console.log("Botão X clicado!")
+    const modal = document.getElementById("modal-login");
+    if (modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Fechar se o usuário clicar fora da caixa
+window.onclick = function(event) {
+    let modal = document.getElementById("modal-login");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

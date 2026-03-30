@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grime Life - Jogar</title>
+    <title>Grime Life - Galeria</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="interface.css">
     <link rel="stylesheet" href="galeria.css">
@@ -20,9 +20,9 @@
         <nav class="menu">
             <a href="../index.html">Inicio</a>
             <a href="jogar.html#area-do-jogo" class="link-menu">Jogar</a>
-            <a href="fotos.html" class="active">Fotos</a>
-            <a href="#">Contato</a>
-            <a href="#" class="entrada">Login</a>
+            <a href="#artes" class="active">Fotos</a>
+            <a href="contato.html">Contato</a>
+            <a href="javascript:void(0)" onclick="abrirLogin()" class="entrada">Login</a>
         </nav>
     </header>
 
@@ -30,7 +30,7 @@
             <h1 class="titulo-sessao">[ ARQUIVOS DE CONTAMINAÇÃO ]</h1>
             <p class="subtitulo-galeria">Registros visuais recuperados dos setores interditados.</p>
 
-            <div class="grid-fotos">
+            <div class="grid-fotos" id="artes">
                 <div class="item-foto">
                     <img src="https://placehold.co/600x400/000000/31ff31/png?text=SCREENSHOT+01" alt="Screenshot do Jogo 1">
                     <div class="legenda">SETOR AA-4: VAZAMENTO</div>
@@ -56,8 +56,26 @@
                     <div class="legenda">A "ÁGUA" DO DISTRITO</div>
                 </div>
             </div>
+
+            <div class="container-botao-final">
+                <a href="jogar.html" class="botao-caos botao-galeria-final">JOGAR</a>
+            </div>
         </main>
 
+        <div id="modal-login" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="fecharLogin()">&times;</span>
+                <h2 class="subtitulo-caixa">ACESSO AO SISTEMA</h2>
+    
+                <form class="formulario-contato">
+                    <input type="text" placeholder="USUÁRIO" required>
+                    <input type="password" placeholder="SENHA" required>
+                    <button type="submit" class="botao-caos">ENTRAR</button>
+                </form>
+            </div>
+        </div>
+        <script src="../script.js"></script>
+        
         <footer>
             <p>2026 - Todos os direitos reservados (Desenvolvido por Liam) </p>
         </footer>

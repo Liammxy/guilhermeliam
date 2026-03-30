@@ -1,0 +1,91 @@
+.container-contato {
+    padding-top: 140px;
+    padding-bottom: 80px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    scroll-margin-top: -115px;
+}
+
+.grid-contato {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    width: 90%;
+    max-width: 1000px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.titulo-sessao {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.caixa-informativa, .caixa-feedback {
+    font-family: 'Spacemono', monospace;
+    background-color: #1a1a1a;
+    border: 2px solid #31ff31;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(49, 255, 49, 0.2);
+    text-align: left;
+    flex: 1 1 400px;
+    max-width: 450px;
+    color: #a2fca2;
+}
+
+.subtitulo-caixa {
+    font-family: 'Silkscreen', sans-serif;
+    color: #31ff31;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #31ff31;
+    padding-bottom: 10px;
+}
+
+.formulario-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario-contato input, .formulario-contato textarea {
+    background: #000;
+    border: 1px solid #333;
+    color: #31ff31;
+    padding: 10px;
+    font-family: 'Silkscreen', sans-serif;
+    outline: none;
+}
+
+.formulario-contato input:focus {
+    border-color: #31ff31;
+}
+
+.botao-contato {
+    width: 100% !important;
+    height: 45px !important;
+    font-size: 0.8rem !important;
+    background-color: #31ff31 !important;
+    border-color: #31ff31 !important;
+    box-shadow: 0 0 15px #31ff31 !important;
+    color: #000 !important;
+}
+
+.container-botao-final {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .grid-contato {
+        grid-template-columns: 1fr;
+    }
+}

@@ -21,8 +21,8 @@
             <a href="../index.html">Inicio</a>
             <a href="#area-do-jogo" class="link-menu">Jogar</a>
             <a href="fotos.html">Fotos</a>
-            <a href="#">Contato</a>
-            <a href="#" class="entrada">Login</a>
+            <a href="contato.html">Contato</a>
+            <a href="javascript:void(0)" onclick="abrirLogin()" class="entrada">Login</a>
         </nav>
     </header>
 
@@ -51,10 +51,22 @@
         </section>
     </main>
 
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="fecharLogin()">&times;</span>
+            <h2 class="subtitulo-caixa">ACESSO AO SISTEMA</h2>
+
+            <form class="formulario-contato">
+                <input type="text" placeholder="USUÁRIO" required>
+                <input type="password" placeholder="SENHA" required>
+                <button type="submit" class="botao-caos">ENTRAR</button>
+            </form>
+        </div>
+    </div>
+    <script src="../script.js"></script>
+
     <footer>
         <p>2026 - Todos os direitos reservados (Desenvolvido por Liam) </p>
     </footer>
-
-    <script src="../script.js"></script>
 </body>
 </html>

@@ -20,8 +20,8 @@
                 <a href="#sobre-jogo">Inicio</a>
                 <a href="pages/jogar.html">Jogar</a>
                 <a href="pages/fotos.html">Fotos</a>
-                <a href="#">Contato</a>
-                <a href="#" class="entrada">Login</a>
+                <a href="pages/contato.html">Contato</a>
+                <a href="javascript:void(0)" onclick="abrirLogin()" class="entrada">Login</a>
             </nav>
         </header>
 
@@ -33,7 +33,7 @@
                 <div class="balao-fala">
                     <p>>>Tá olhando pro meu moletom? É a última coisa limpa nesse mundo sujo, não se acostuma</p>
                 </div>
-                <a href="pages/jogar.html" class="botao-caos">>>JOGAR</a>
+                <a href="pages/jogar.html" class="botao-caos">JOGAR</a>
                 </div>
 
                <div class="coluna-radar">
@@ -113,6 +113,20 @@
             </section>
         </main>
 
+            <div id="modal-login" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" onclick="fecharLogin()">&times;</span>
+                    <h2 class="subtitulo-caixa">ACESSO AO SISTEMA</h2>
+
+                    <form class="formulario-contato">
+                        <input type="text" placeholder="USUÁRIO" required>
+                        <input type="password" placeholder="SENHA" required>
+                        <button type="submit" class="botao-caos">ENTRAR</button>
+                    </form>
+                </div>
+            </div>
+            <script src="script.js"></script>
+            
         <footer>
             <p>2026 - Todos os direitos reservados (Desenvolvido por Liam) </p>
         </footer>

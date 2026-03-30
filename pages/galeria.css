@@ -77,3 +77,14 @@
 .item-foto:hover .legenda {
     transform: translateY(0);
 }
+
+#artes {
+    scroll-margin-top: 115px;
+}
+
+.container-botao-final {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+}
