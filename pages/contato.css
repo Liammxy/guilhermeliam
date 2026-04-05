@@ -90,8 +90,12 @@
         box-sizing: border-box;
     }
     .container-contato {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
         width: 100%;
-        padding: 20px 15px;
+        padding: 25px !important;
         padding-top: 220px;
         padding-bottom: 60px;
         overflow-x: hidden;
@@ -112,6 +116,26 @@
     .titulo-sessao {
         font-size: 1.5rem;
         margin-bottom: 15px;
+    }
+
+    .caixa-informativa p, .caixa-feedback span {
+        width: 100%;
+        margin-bottom: 15px;
+        line-height: 1.4;
+        display: block;
+    }
+
+    .subtitulo-caixa {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #31ff31;
+    }
+
+    .caixa-informativa p:last-child {
+        word-break: break-all;
+        font-size: 0.85rem;
     }
 
     .botao-contato {
