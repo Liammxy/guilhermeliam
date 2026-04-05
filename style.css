@@ -435,10 +435,21 @@ footer p {
         height: auto;
     }
 
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
     .menu a {
-        margin-left: 10px;
-        margin-right: 10px;
-        font-size: 12px;
+        margin: 0 !important;
+        font-size: 14px;
+        display: inline-block;
+        text-align: center;
     }
 
     .conteudo-principal {
