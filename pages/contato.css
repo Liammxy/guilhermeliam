@@ -84,8 +84,32 @@
     justify-content: center;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+    .container-contato {
+        padding-top: 220px;
+        padding-bottom: 60px;
+    }
+
     .grid-contato {
-        grid-template-columns: 1fr;
+        width: 95%;
+        gap: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .caixa-informativa, .caixa-feedback {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .titulo-sessao {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .botao-contato {
+        height: 50px !important;
+        font-size: 1rem !important;
     }
 }
