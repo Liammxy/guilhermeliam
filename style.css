@@ -419,13 +419,19 @@ footer p {
 
 @media screen and (max-width: 768px) {
     .ajusteprimeiraparte, .layout-split {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
     }
 
     .header {
+        width: 100%;
+        box-sizing: border-box;
         flex-direction: column;
         padding: 20px;
+        left: 0;
+        right: 0;
         height: auto;
     }
 
@@ -441,8 +447,19 @@ footer p {
     }
 
     .sobre, .status-mundo, .conteudo-procurado {
+        flex: none;
         width: 100%;
-        margin-bottom: 20px;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 15px;
+    }
+
+    .imagemcisne img {
+        max-width: 100%;
+        height: auto;
+        display: block;
     }
 
     .modal-content {
