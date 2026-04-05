@@ -119,13 +119,6 @@
         word-wrap: break-word;
     }
 
-    .caixa-informativa p, .caixa-informativa span, .caixa-informativa h3 {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        word-break: break-all;
-        white-space: normal;
-    }
-
     .titulo-sessao {
         font-size: 1.5rem;
         margin-bottom: 15px;
