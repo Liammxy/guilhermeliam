@@ -88,3 +88,37 @@
     width: 100%;
     margin-top: 50px;
 }
+
+@media screen and (max-width: 768px) {
+    .container-galeria {
+        padding-top: 150px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .grid-fotos {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+
+    .item-foto {
+        height: 250px;
+    }
+
+    .titulo-sessao {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .subtitulo-galeria {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .legenda {
+        transform: translateY(0);
+        background-color: rgba(49, 255, 49, 0.8);
+        font-size: 0.65rem;
+    }
+}
