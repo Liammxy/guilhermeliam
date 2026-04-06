@@ -1,5 +1,4 @@
 :root {
-    /* cores principais */
  --neon-principal: #ffffff;  
  --neon-suave: #460043; /* o verde claro dos textos */
  --fundo-dark: #f0a5ff; /* o preto do body */
@@ -13,8 +12,10 @@
   --sombra-botao: 0 0 15px #e77ffa; /* o brilho forte do botao */
   --sombra-radar: rgb(255, 255, 255); /* parte que gira no radar */
   --cor-botaojogar: #ffffff;
-  --cor-hover-menu: #ea00ff;
+  --cor-hover-menu: #aefcff;
   --cor-cisnenegronome: #5f0342;
+  --corbordalogin: rgb(255, 255, 255);
+  --corhoverlogin: #aefcff;
 }
 
 .lightmode {
@@ -33,12 +34,16 @@
   --cor-botaojogar: #ff9900;
   --cor-hover-menu: #ffff00;
   --cor-cisnenegronome: #00ff00;
+  --corbordalogin: rgba(49, 255, 49, 0.4);
+  --corhoverlogin: #26cc26;
 }
 
 #theme-switch {
     height: 50px;
     width: 50px;
     padding: 0;
+    margin: 0;
+    cursor: pointer;
     border-radius: 50%;
     background-color: var(--neon-principal);
     display: flex;
@@ -74,8 +79,8 @@ html {
     scroll-behavior: smooth;
     min-height: 100%;
     box-sizing: border-box;
-    border-left: 2px solid var(--neon-principal);
-    border-right: 2px solid var(--neon-principal);
+    border-left: 2px solid var(--neon-suave);
+    border-right: 2px solid var(--neon-suave);
 }
 
 body{
@@ -100,11 +105,17 @@ body{
     justify-content:space-between;
     align-items:center;
     background: var(--fundo-negro);
-    padding: 30px 50px;
+    padding: 30px 20px;
     z-index:1000;
     box-sizing: border-box;
     border: 3px solid var(--neon-principal);
     border-radius: 8px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .logo{
@@ -418,7 +429,7 @@ h2 {
     border-radius: 15px;
     width: 350px;
     text-align: center;
-    box-shadow: 0 0 30px rgba(49, 255, 49, 0.4);
+    box-shadow: 0 0 30px var(--corbordalogin);
     position: relative;
 }
 
@@ -443,7 +454,7 @@ h2 {
     background-color: var(--neon-principal) !important;
     color: var(--fundo-input) !important;
     border: none;
-    box-shadow: 0 0 15px rgba(49, 255, 49, 0.6);
+    box-shadow: 0 0 15px var(--sombra-botao);
     transition: 0.3s;
 }
 
@@ -456,7 +467,7 @@ h2 {
 .modal-content .botao-caos:active {
     transform: translateY(2px); scale: (0.98);
     box-shadow: 0 0 5px rgba(49, 255, 49, 0.4);
-    background-color: #26cc26 !important;
+    background-color: var(--corhoverlogin) !important;
     transition: 0.05s;
 }
 

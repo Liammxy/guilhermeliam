@@ -1,3 +1,82 @@
+:root {
+ --neon-principal: #ffffff;  
+ --neon-suave: #460043; /* o verde claro dos textos */
+ --fundo-dark: #f0a5ff; /* o preto do body */
+ --fundo-caixa: #c23ccc; /* o cinza escuro das caixas */
+ --fundo-input: #ff00dd; /* o fundo preto puro dos input */
+ --borda-input: #fb00ff; /* o cinza das bordas desativadas */
+ --fundo-negro: rgb(178, 58, 205); /* fundo header */
+
+  /* efeitos glow */
+  --sombra-neon: 0 0 15px rgba(144, 3, 130, 0.2);
+  --sombra-botao: #e77ffa; /* o brilho forte do botao */
+  --sombra-radar: rgb(255, 255, 255); /* parte que gira no radar */
+  --cor-botaojogar: #ffffff;
+  --cor-hover-menu: #aefcff;
+  --cor-cisnenegronome: #5f0342;
+  --sombradotexto:rgba(255, 255, 255, 0.7);
+  --sombrahoverfotos: rgba(255, 255, 255, 0.9);
+  --backgroundlegenda: rgba(245, 105, 255, 0.9);
+}
+
+.lightmode {
+ --neon-principal: #31ff31;  
+ --neon-suave: #a2fca2; /* o verde claro dos textos */
+ --fundo-dark: #111; /* o preto do body */
+ --fundo-caixa: #1a1a1a; /* o cinza escuro das caixas */
+ --fundo-input: #000000; /* o fundo preto puro dos input */
+ --borda-input: #333333; /* o cinza das bordas desativadas */
+ --fundo-negro: rgb(0, 0, 0); /* fundo header */
+
+  /* efeitos glow */
+  --sombra-neon: 0 0 15px rgba(49, 255, 49, 0.2);
+  --sombra-botao: #31ff31; /* o brilho forte do botao */
+  --sombra-radar: rgba(49, 255, 49, 0.3); /* parte que gira no radar */
+  --cor-botaojogar: #ff9900;
+  --cor-hover-menu: #ffff00;
+  --cor-cisnenegronome: #00ff00;
+  --sombradotexto:rgba(49, 255, 49, 0.7);
+  --sombrahoverfotos: rgba(9, 255, 49, 0.9);
+  --backgroundlegenda: rgba(49, 255, 49, 0.9);
+}
+
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: var(--neon-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--fundo-negro);
+}
+
+#theme-switch i {
+    fill: var(--neon-principal);
+}
+
+#theme-switch i:last-child {
+    display: none;
+}
+
+.lightmode #theme-switch  i:first-child {
+    display: none;
+}
+
+.lightmode #theme-switch i:last-child {
+    display: block;
+}
+
+#theme-switch:hover {
+    box-shadow: var(--sombra-botao);
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
 .container-galeria {
     padding-top: 120px;
     padding-left: 5%;
@@ -8,16 +87,16 @@
 
 .titulo-sessao {
     text-align: center;
-    color: #31ff31;
+    color: var(--neon-principal);
     font-family: 'Silkscreen', sans-serif;
     font-size: 2rem;
     margin-bottom: 40px;
-    text-shadow: 0 0 10px rgba(49, 255, 49, 0.7);
+    text-shadow: 0 0 10px var(--sombradotexto);
 }
 
 .subtitulo-galeria {
     text-align: center;
-    color: #31ff31;
+    color: var(--neon-principal);
     font-family: 'Spacemono', monospace;
     font-size: 1.3rem;
     margin-bottom: 40px;
@@ -35,7 +114,7 @@
 .item-foto {
     position: relative;
     overflow: hidden;
-    border: 2px solid #31ff31;
+    border: 2px solid var(--sombra-botao);
     background-color: #000;
 }
 
@@ -50,8 +129,8 @@
 
 .item-foto:hover {
     transform: scale(1.03);
-    border-color: #31ff31;
-    box-shadow: 0 0 25px rgba(9, 255, 49, 0.9);
+    border-color: var(--sombra-botao);
+    box-shadow: 0 0 25px var(--sombrahoverfotos);
     z-index: 5;
 }
 
@@ -64,7 +143,7 @@
     bottom: 0px;
     left: 0;
     width: 100%;
-    background: rgba(49, 255, 49, 0.9);
+    background: var(--backgroundlegenda);
     color: #000;
     font-family: 'Silkscreen', sans-serif;
     font-size: 0.75rem;
@@ -118,7 +197,7 @@
 
     .legenda {
         transform: translateY(0);
-        background-color: rgba(49, 255, 49, 0.8);
+        background-color: var(--backgroundlegenda);
         font-size: 0.65rem;
     }
 }

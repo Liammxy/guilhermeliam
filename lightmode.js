@@ -1,19 +1,29 @@
-let lightmode = localStorage.getItem('lightmode')
-const themeSwitch = document.getElementById('theme-switch')
+// Função para aplicar o tema
+const aplicarTema = () => {
+    const lightModeAtivo = localStorage.getItem("light-mode");
+    if (lightModeAtivo === "enabled") {
+        document.body.classList.add("lightmode");
+    } else {
+        document.body.classList.remove("lightmode");
+    }
+};
 
-const enableLightmode = () => {
-    document.body.classList.add('lightmode')
-    localStorage.setItem('lightmode', 'active')
-}
+// Executa IMEDIATAMENTE ao carregar o arquivo JS
+aplicarTema();
 
-const disableLightmode = () => {
-    document.body.classList.remove('lightmode')
-    localStorage.setItem('lightmode', null)
-}
+// Configura o botão (espera o HTML carregar para achar o ID)
+document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("theme-switch");
 
-if(lightmode === "active") enableLightmode()
+    if (btn) {
+        btn.addEventListener("click", () => {
+            document.body.classList.toggle("lightmode");
 
-themeSwitch.addEventListener("click", () => {
-    lightmode = localStorage.getItem('lightmode')
-    lightmode !== "active" ? enableLightmode() : disableLightmode()
-})
+            if (document.body.classList.contains("lightmode")) {
+                localStorage.setItem("light-mode", "enabled");
+            } else {
+                localStorage.setItem("light-mode", "disabled");
+            }
+        });
+    }
+});

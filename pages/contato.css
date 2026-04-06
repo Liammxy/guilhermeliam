@@ -1,3 +1,84 @@
+:root {
+ --neon-principal: #ffffff;  
+ --neon-suave: #460043; /* o verde claro dos textos */
+ --fundo-dark: #f0a5ff; /* o preto do body */
+ --fundo-caixa: #c23ccc; /* o cinza escuro das caixas */
+ --fundo-input: #ff00dd; /* o fundo preto puro dos input */
+ --borda-input: #fb00ff; /* o cinza das bordas desativadas */
+ --fundo-negro: rgb(178, 58, 205); /* fundo header */
+
+  /* efeitos glow */
+  --sombra-neon: 0 0 15px rgba(144, 3, 130, 0.2);
+  --sombra-botao: #e77ffa; /* o brilho forte do botao */
+  --sombra-radar: rgb(255, 255, 255); /* parte que gira no radar */
+  --cor-botaojogar: #ffffff;
+  --cor-hover-menu: ##aefcff;
+  --cor-cisnenegronome: #5f0342;
+  --sombradotexto:rgba(255, 255, 255, 0.7);
+  --sombrahoverfotos: rgba(255, 255, 255, 0.9);
+  --backgroundlegenda: rgba(245, 105, 255, 0.9);
+  --sombracaixainformativa: rgb(208, 84, 239);
+}
+
+.lightmode {
+ --neon-principal: #31ff31;  
+ --neon-suave: #a2fca2; /* o verde claro dos textos */
+ --fundo-dark: #111; /* o preto do body */
+ --fundo-caixa: #1a1a1a; /* o cinza escuro das caixas */
+ --fundo-input: #000000; /* o fundo preto puro dos input */
+ --borda-input: #333333; /* o cinza das bordas desativadas */
+ --fundo-negro: rgb(0, 0, 0); /* fundo header */
+
+  /* efeitos glow */
+  --sombra-neon: 0 0 15px rgba(49, 255, 49, 0.2);
+  --sombra-botao: #31ff31; /* o brilho forte do botao */
+  --sombra-radar: rgba(49, 255, 49, 0.3); /* parte que gira no radar */
+  --cor-botaojogar: #ff9900;
+  --cor-hover-menu: #ffff00;
+  --cor-cisnenegronome: #00ff00;
+  --sombradotexto:rgba(49, 255, 49, 0.7);
+  --sombrahoverfotos: rgba(9, 255, 49, 0.9);
+  --backgroundlegenda: rgba(49, 255, 49, 0.9);
+  --sombracaixainformativa: rgba(49, 255, 49, 0.2);
+}
+
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: var(--neon-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--fundo-negro);
+}
+
+#theme-switch i {
+    fill: var(--neon-principal);
+}
+
+#theme-switch i:last-child {
+    display: none;
+}
+
+.lightmode #theme-switch  i:first-child {
+    display: none;
+}
+
+.lightmode #theme-switch i:last-child {
+    display: block;
+}
+
+#theme-switch:hover {
+    box-shadow: var(--sombra-botao);
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
 .container-contato {
     padding-top: 140px;
     padding-bottom: 80px;
@@ -28,23 +109,23 @@
 
 .caixa-informativa, .caixa-feedback {
     font-family: 'Spacemono', monospace;
-    background-color: #1a1a1a;
-    border: 2px solid #31ff31;
+    background-color: var(--fundo-caixa);
+    border: 2px solid var(--sombra-botao);
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 0 15px rgba(49, 255, 49, 0.2);
+    box-shadow: 0 0 15px var(--sombracaixainformativa);
     text-align: left;
     flex: 1 1 400px;
     max-width: 450px;
-    color: #a2fca2;
+    color: var(--neon-suave);
 }
 
 .subtitulo-caixa {
     font-family: 'Silkscreen', sans-serif;
-    color: #31ff31;
+    color: var(--neon-principal);
     font-size: 1.1rem;
     margin-bottom: 20px;
-    border-bottom: 1px solid #31ff31;
+    border-bottom: 1px solid var(--sombra-botao);
     padding-bottom: 10px;
 }
 
@@ -57,23 +138,23 @@
 .formulario-contato input, .formulario-contato textarea {
     background: #000;
     border: 1px solid #333;
-    color: #31ff31;
+    color: var(--neon-principal);
     padding: 10px;
     font-family: 'Silkscreen', sans-serif;
     outline: none;
 }
 
 .formulario-contato input:focus {
-    border-color: #31ff31;
+    border-color: var(--sombra-botao);
 }
 
 .botao-contato {
     width: 100% !important;
     height: 45px !important;
     font-size: 0.8rem !important;
-    background-color: #31ff31 !important;
-    border-color: #31ff31 !important;
-    box-shadow: 0 0 15px #31ff31 !important;
+    background-color: var(--neon-principal) !important;
+    border-color: var(--sombra-botao) !important;
+    box-shadow: 0 0 15px var(--sombra-botao) !important;
     color: #000 !important;
 }
 
