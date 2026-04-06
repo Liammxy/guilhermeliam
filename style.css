@@ -1,17 +1,89 @@
+:root {
+    /* cores principais */
+ --neon-principal: #ffffff;  
+ --neon-suave: #460043; /* o verde claro dos textos */
+ --fundo-dark: #f0a5ff; /* o preto do body */
+ --fundo-caixa: #c23ccc; /* o cinza escuro das caixas */
+ --fundo-input: #ff00dd; /* o fundo preto puro dos input */
+ --borda-input: #fb00ff; /* o cinza das bordas desativadas */
+ --fundo-negro: rgb(178, 58, 205); /* fundo header */
+
+  /* efeitos glow */
+  --sombra-neon: 0 0 15px rgba(144, 3, 130, 0.2);
+  --sombra-botao: 0 0 15px #e77ffa; /* o brilho forte do botao */
+  --sombra-radar: rgb(255, 255, 255); /* parte que gira no radar */
+  --cor-botaojogar: #ffffff;
+  --cor-hover-menu: #ea00ff;
+  --cor-cisnenegronome: #5f0342;
+}
+
+.lightmode {
+ --neon-principal: #31ff31;  
+ --neon-suave: #a2fca2; /* o verde claro dos textos */
+ --fundo-dark: #111; /* o preto do body */
+ --fundo-caixa: #1a1a1a; /* o cinza escuro das caixas */
+ --fundo-input: #000000; /* o fundo preto puro dos input */
+ --borda-input: #333333; /* o cinza das bordas desativadas */
+ --fundo-negro: rgb(0, 0, 0); /* fundo header */
+
+  /* efeitos glow */
+  --sombra-neon: 0 0 15px rgba(49, 255, 49, 0.2);
+  --sombra-botao: 0 0 15px #31ff31; /* o brilho forte do botao */
+  --sombra-radar: rgba(49, 255, 49, 0.3); /* parte que gira no radar */
+  --cor-botaojogar: #ff9900;
+  --cor-hover-menu: #ffff00;
+  --cor-cisnenegronome: #00ff00;
+}
+
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--neon-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--fundo-negro);
+}
+
+#theme-switch i {
+    fill: var(--neon-principal);
+}
+
+#theme-switch i:last-child {
+    display: none;
+}
+
+.lightmode #theme-switch  i:first-child {
+    display: none;
+}
+
+.lightmode #theme-switch i:last-child {
+    display: block;
+}
+
+#theme-switch:hover {
+    box-shadow: var(--sombra-botao);
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
 html {
     scroll-behavior: smooth;
     min-height: 100%;
     box-sizing: border-box;
-    border-left: 2px solid #31ff31;
-    border-right: 2px solid #31ff31;
+    border-left: 2px solid var(--neon-principal);
+    border-right: 2px solid var(--neon-principal);
 }
 
 body{
     margin: 0;
     font-family: 'Space Mono' , monospace;
     line-height: 1.6;
-    color: #31ff31;
-    background-color: #111;
+    color: var(--cor-cisnenegronome);
+    background-color: var(--fundo-dark);
     overflow-x: hidden;
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('images/planoroxo.png');
     background-size: cover;
@@ -27,11 +99,11 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:rgb(0, 0, 0);
+    background: var(--fundo-negro);
     padding: 30px 50px;
     z-index:1000;
     box-sizing: border-box;
-    border: 3px solid #31ff31;
+    border: 3px solid var(--neon-principal);
     border-radius: 8px;
 }
 
@@ -57,7 +129,7 @@ body{
     margin-left: 30px;
     padding: 5px 10px;
     text-decoration: none;
-    color: #31ff31;
+    color: var(--neon-principal);
     font-size:14px;
     transition:0.3s;
 }
@@ -65,8 +137,8 @@ body{
 .menu a:hover{
     opacity: 1.5;
     color: #000;
-    box-shadow: 0 0 15px #ffff00;
-    background-color: #ffff00;
+    box-shadow: 0 0 15px var(--cor-hover-menu);
+    background-color: var(--cor-hover-menu);
     border-radius: 5px;
     transform: scale(1.2);
 }
@@ -95,8 +167,9 @@ body{
 
 .coluna-radar {
     font-family: 'Silkscreen', sans-serif;
-    border: 3px solid #31ff31;
-    background-color: #000;
+    color: var(--neon-principal);
+    border: 3px solid var(--neon-principal);
+    background-color: var(--fundo-negro);
     padding: 30px;
     text-align: center;
     box-shadow: 0 0 15px rgba(49, 255, 49, 0.4);
@@ -116,9 +189,9 @@ h2 {
 
 .sobre {
     flex: 2;
-    background-color: #111;
+    background-color: var(--fundo-dark);
     padding: 30px;
-    border: 1px solid #333;
+    border: 1px solid var(--borda-input);
     border-radius: 5px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
     font-family: 'Spacemono' , monospace;
@@ -131,13 +204,14 @@ h2 {
 }
 
 .sobre p {
-    color: #a2fca2;
+    color: var(--neon-suave);
     max-width: 800px;
 }
 
 .status-mundo {
+    color: var(--neon-principal);
     flex: 1;
-    border: 1px solid #31ff31;
+    border: 1px solid var(--neon-principal);
     padding: 20px;
     background: rgba(49, 255, 49, 0.05);
     font-family: 'Spacemono' , monospace;
@@ -147,20 +221,20 @@ h2 {
     font-family: 'Silkscreen' , sans-serif;
     font-size: 1.2rem;
     margin-bottom: 20px;
-    border-bottom: 1px solid #31ff31;
+    border-bottom: 1px solid var(--neon-principal);
 }
 
 .barra {
     width: 100%;
     height: 10px;
-    border: 1px solid #31ff31;
+    border: 1px solid var(--neon-principal);
     margin-top: 5px;
 }
 
 .progresso {
     height: 100%;
-    background-color: #31ff31;
-    box-shadow: 0 0 10px #31ff31;
+    background-color: var(--neon-principal);
+    box-shadow: 0 0 10px var(--neon-principal);
 }
 
 .alerta {
@@ -172,9 +246,9 @@ h2 {
 
 .conteudo-procurado {
     flex: 1;
-    border: 1px solid #31ff31;
+    border: 1px solid var(--neon-principal);
     padding: 15px;
-    background-color: #111;
+    background-color: var(--fundo-dark);
     font-family: 'Spacemono' , monospace;
 }
 
@@ -182,14 +256,14 @@ h2 {
     font-family: 'Silkscreen' , sans-serif;
     font-size: 1.2rem;
     margin-bottom: 20px;
-    border-bottom: 1px solid #31ff31;
+    border-bottom: 1px solid var(--neon-principal);
 }
 
 .imagemcisne {
     width: 100%;
     max-width: 350px;
     margin: 0 auto;
-    border: 1px solid #31ff31;
+    border: 1px solid var(--neon-principal);
     background-color: #000;
     overflow: hidden;
 }
@@ -204,10 +278,12 @@ h2 {
 .perfil-criminoso {
     font-family: "Spacemono" , monospace;
     text-align: center;
+    color: var(--neon-suave);
 }
 
 .perfil-criminoso h2 {
     font-size: 1.2rem;
+    color: var(--neon-suave);
 }
 
 .perfil-criminoso h4 {
@@ -216,9 +292,13 @@ h2 {
 }
 
 .vulgo {
-    color: #00ff00;
+    color: var(--cor-cisnenegronome);
     font-weight: bold;
-    text-shadow: 0 0 5px #00ff00;
+    text-shadow: 0 0 5px var(--cor-cisnenegronome);
+}
+
+.bio-cisne p, h4{
+    color: var(--neon-suave);
 }
 
 .imagem-caos {
@@ -230,7 +310,7 @@ h2 {
 
 @keyframes neonPulse {
     from {
-        filter: drop-shadow(0 0 15px rgba(255, 255, 0, 0.6));
+        filter: drop-shadow(0 0 15px var(--sombra-botao));
     }
     to {
         filter: drop-shadow(0 0 25px rgba(255, 255, 0, 0.85));
@@ -239,15 +319,15 @@ h2 {
 
 .balao-fala {
     position: relative;
-    background-color: #000;
-    border: 3px solid #31ff31;
+    background-color: var(--fundo-negro);
+    border: 3px solid var(--neon-principal);
     padding: 25px 30px;
     max-width: 450px;
-    box-shadow: 0 0 15px rgba(49, 255, 49, 0.4);
+    box-shadow: 0 0 15px var(--neon-principal);
 }
 
 .balao-fala p {
-    color: #31ff31;
+    color: var(--neon-principal);
     font-family: 'Silkscreen' , sans-serif;
     font-size: 1rem;
     margin: 0;
@@ -260,9 +340,9 @@ h2 {
     width: 100%;
     max-width: 450px;
     height: 60px;
-    border: 3px solid #ff9900;
+    border: 3px solid var(--cor-botaojogar);
     border-radius: 5px;
-    color: #000000;
+    color: var(--fundo-input);
     font-family: 'Silkscreen' , sans-serif;
     font-size: 1.5rem;
     text-decoration: none;
@@ -270,27 +350,27 @@ h2 {
     transition: 0.3s;
     align-items: center;
     justify-content: center;
-    background-color: #ff9900;
-    box-shadow: 0 0 15px #ff9900;
+    background-color: var(--cor-botaojogar);
+    box-shadow: 0 0 15px var(--cor-botaojogar);
 }
 
 .botao-caos:hover {
-    background-color: #ffff00;
-    color: #000000;
-    border: 3px solid #ffff00;
-    box-shadow: 0 0 30px #ffff00;
+    background-color: var(--cor-hover-menu);
+    color: var(--fundo-input);
+    border: 3px solid var(--cor-hover-menu);
+    box-shadow: 0 0 30px var(--cor-hover-menu);
     transform: scale(1.05);
 }
 
 .botao-caos:active {
     transform: scale(0.98);
-    box-shadow: 0 0 10px #ffff00;
+    box-shadow: 0 0 10px var(--cor-hover-menu);
 }
 
 .radar-ponto {
     width: 112px;
     height: 113px;
-    border: 3px solid #31ff31;
+    border: 3px solid var(--neon-principal);
     border-radius: 50%;
     margin: 0 auto 20px;
     position: relative;
@@ -302,7 +382,7 @@ h2 {
     position: absolute;
     width: 50%;
     height: 50%;
-    background: rgba(49, 255, 49, 0.3);
+    background: var(--sombra-radar);
     top: 0;
     left: 0;
     transform-origin: bottom right;
@@ -331,10 +411,10 @@ h2 {
 }
 
 .modal-content {
-    background-color: #1a1a1a;
+    background-color: var(--fundo-caixa);
     margin: 10% auto;
     padding: 40px;
-    border: 2px solid #31ff31;
+    border: 2px solid var(--neon-principal);
     border-radius: 15px;
     width: 350px;
     text-align: center;
@@ -344,8 +424,8 @@ h2 {
 
 .modal-content input {
     background-color: #000 !important;
-    border: 1px solid #333 !important;
-    color: #31ff31 !important;
+    border: 1px solid var(--borda-input) !important;
+    color: var(--neon-principal) !important;
     padding: 10px;
     margin-bottom: 15px;
     width: 100%;
@@ -355,13 +435,13 @@ h2 {
 
 .modal-content input:focus {
     outline: none;
-    border-color: #31ff31;
-    box-shadow: 0 0 5px #31ff31;
+    border-color: var(--neon-principal);
+    box-shadow: 0 0 5px var(--neon-principal);
 }
 
 .modal-content .botao-caos {
-    background-color: #31ff31 !important;
-    color: #000000 !important;
+    background-color: var(--neon-principal) !important;
+    color: var(--fundo-input) !important;
     border: none;
     box-shadow: 0 0 15px rgba(49, 255, 49, 0.6);
     transition: 0.3s;
@@ -369,7 +449,7 @@ h2 {
 
 .modal-content .botao-caos:hover {
     background-color: #ffffff !important;
-    box-shadow: 0 0 25px #31ff31;
+    box-shadow: 0 0 25px var(--neon-principal);
     transform: scale(1.05);
 }
 
@@ -384,7 +464,7 @@ h2 {
     position: absolute;
     right: 20px;
     top: 10px;
-    color: #31ff31;
+    color: var(--neon-principal);
     font-size: 35px;
     cursor: pointer;
     z-index: 10001;
@@ -393,7 +473,7 @@ h2 {
 
 .close-button:hover {
     color: #fff;
-    text-shadow: 0 0 10px #31ff31;
+    text-shadow: 0 0 10px var(--neon-principal);
 }
 
 footer {
@@ -401,16 +481,16 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(0, 0, 0);
+    background: var(--fundo-negro);
     padding: 30px 50px;
     box-sizing: border-box;
-    border: 3px solid #31ff31;
+    border: 3px solid var(--neon-principal);
     border-radius: 8px;
     margin-top: 40px;
 }
 
 footer p {
-    color: #31ff31;
+    color: var(--neon-principal);
     font-family: 'Silkscreen', sans-serif;
     font-size: 14px;
     letter-spacing: 1px;
