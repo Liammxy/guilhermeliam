@@ -54,3 +54,30 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+// parte da idade
+function confirmarIdade() {
+    // remove o desfoque do conteudo principal
+    const main = document.getElementById('main-site');
+    main.classList.remove('blur-active');
+
+    // esconde o modal de idade
+    const modal = document.getElementById('modal-idade');
+    modal.style.display = 'none';
+
+    // salva no navegador pra n perguntarr de novo
+
+    localStorage.setItem('maiorDeIdade', 'true');
+}
+
+//Verifica se ja confirmou antes ao carregar a pagina
+window.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('maiorDeIdade') === 'true') {
+        const main = document.getElementById('main-site');
+        const modal = document.getElementById('modal-idade');
+
+        if(main) main.classList.remove('blur-active');
+        if(modal) modal.style.display = 'none';
+    }
+});

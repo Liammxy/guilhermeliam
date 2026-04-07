@@ -5,12 +5,20 @@
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="verificacao.css">
         <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
         <link rel="icon" type="images/png" href="images/exxe.png">
         <script src="https://unpkg.com/@phosphor-icons/web"></script>
         <script type="text/javascript" src="lightmode.js" defer></script>
     </head>
-    <body class="lightmode">
+    <body class="lightmode"> <div id="modal-idade">
+        <div class="modal-idade-content">
+            <h2>Área Restrita</h2>
+            <p>Você confirma que tem mais de 18 anos para entrar no GrimeLife?</p>
+            <button class="botao-caos" onclick="confirmarIdade()">Sim, tenho +18</button>
+        </div>
+    </div>
+
         <header class="header">
             <div class="logo-container">
             <div class="logo">
@@ -33,7 +41,7 @@
             </nav>
         </header>
 
-        <main class="conteudo-principal">
+        <main class="conteudo-principal blur-active" id="main-site">
 
             <div class="ajusteprimeiraparte">
                 <img src="images/sapodoido.png" alt="PersonagemGrimeLife" class="imagem-caos">
