@@ -13,9 +13,12 @@
     </head>
     <body class="lightmode"> <div id="modal-idade">
         <div class="modal-idade-content">
-            <h2>Área Restrita</h2>
-            <p>Você confirma que tem mais de 18 anos para entrar no GrimeLife?</p>
+            <h2 id="titulo-modal">Área Restrita</h2>
+            <p id="texto-modal">Você confirma que tem mais de 18 anos para entrar no GrimeLife?</p>
+            <div id="container-botoes">
             <button class="botao-caos" onclick="confirmarIdade()">Sim, tenho +18</button>
+            <button class="botao-bloqueio" onclick="negarIdade()">Não, sou menor</button>
+            </div>
         </div>
     </div>
 

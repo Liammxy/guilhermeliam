@@ -1,21 +1,28 @@
 :root {
- --neon-principal: #ffffff;  
- --neon-suave: #460043; /* o verde claro dos textos */
- --fundo-dark: #f0a5ff; /* o preto do body */
- --fundo-caixa: #c23ccc; /* o cinza escuro das caixas */
- --fundo-input: #ff00dd; /* o fundo preto puro dos input */
- --borda-input: #fb00ff; /* o cinza das bordas desativadas */
- --fundo-negro: rgb(178, 58, 205); /* fundo header */
+ --neon-principal: #fff700;  
+ --neon-suave: #000000; /* o verde claro dos textos */
+ --fundo-dark: #f2ff00; /* o preto do body */
+ --fundo-caixa: #878787; /* o cinza escuro das caixas */
+ --fundo-input: #707070; /* o fundo preto puro dos input */
+ --borda-input: #000000; /* o cinza das bordas desativadas */
+ --fundo-negro: rgb(24, 24, 24); /* fundo header */
+ --nomelogo: #fff700;
 
   /* efeitos glow */
-  --sombra-neon: 0 0 15px rgba(144, 3, 130, 0.2);
-  --sombra-botao: 0 0 15px #e77ffa; /* o brilho forte do botao */
-  --sombra-radar: rgb(255, 255, 255); /* parte que gira no radar */
+  --sombra-neon: 0 0 15px rgb(255, 238, 0);
+  --sombra-botao: 0 0 15px #ffd000; /* o brilho forte do botao */
+  --sombra-radar: #fff700; /* parte que gira no radar */
   --cor-botaojogar: #ffffff;
-  --cor-hover-menu: #aefcff;
-  --cor-cisnenegronome: #5f0342;
-  --corbordalogin: rgb(255, 255, 255);
-  --corhoverlogin: #aefcff;
+  --cor-hover-menu: #ffffa6;
+  --cor-cisnenegronome: #000000;
+  --corbordalogin: rgb(0, 0, 0);
+  --corhoverlogin: #00f7ff;
+  --fundo-procurado: #f2ff00;
+  --borda-procurado: #000000;
+  --color-alerta: #ff0000;
+  --linha-h3: #000;
+  --cor-h2dosobre: #000;
+  --boxshadowradar: #ffa200;
 }
 
 .lightmode {
@@ -23,9 +30,14 @@
  --neon-suave: #a2fca2; /* o verde claro dos textos */
  --fundo-dark: #111; /* o preto do body */
  --fundo-caixa: #1a1a1a; /* o cinza escuro das caixas */
+ --fundo-procurado: #111;
+ --borda-procurado: #31ff31;
  --fundo-input: #000000; /* o fundo preto puro dos input */
  --borda-input: #333333; /* o cinza das bordas desativadas */
  --fundo-negro: rgb(0, 0, 0); /* fundo header */
+ --color-alerta: #ff3131;
+ --cor-h2dosobre: #31ff31;
+ --nomelogo: #31ff31;
 
   /* efeitos glow */
   --sombra-neon: 0 0 15px rgba(49, 255, 49, 0.2);
@@ -36,6 +48,8 @@
   --cor-cisnenegronome: #00ff00;
   --corbordalogin: rgba(49, 255, 49, 0.4);
   --corhoverlogin: #26cc26;
+  --linha-h3: #31ff31;
+  --boxshadowradar: rgba(49, 255, 49, 0.4);
 }
 
 #theme-switch {
@@ -97,6 +111,16 @@ body{
     background-attachment: fixed;
 }
 
+body:not(.lightmode) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('images/planocinza.jpeg') !important;
+    background-color: #3c3c3c; 
+}
+
+body.lightmode {
+    background-color: var(--fundo-dark);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('images/planoroxo.png') !important;
+}
+
 .header{
     position: fixed;
     top: 0;
@@ -127,6 +151,7 @@ body{
     letter-spacing:2px;
     font-family: 'Silkscreen' , sans-serif;
     letter-spacing: -2px;
+    color: var(--nomelogo);
   }
 
   .logo-emoji {
@@ -183,11 +208,12 @@ body{
     background-color: var(--fundo-negro);
     padding: 30px;
     text-align: center;
-    box-shadow: 0 0 15px rgba(49, 255, 49, 0.4);
+    box-shadow: 0 0 15px var(--boxshadowradar);
 }
 
 h2 {
     font-family: 'Silkscreen' , sans-serif;
+    color: var(--cor-h2dosobre);
 }
 
 .layout-split {
@@ -249,7 +275,7 @@ h2 {
 }
 
 .alerta {
-    color: #ff3131; /* Um vermelho pra constraste de aviso */
+    color: var(--color-alerta); /* Um vermelho pra constraste de aviso */
     font-weight: bold;
     margin-top: 20px;
     font-size: 0.8rem;
@@ -257,9 +283,9 @@ h2 {
 
 .conteudo-procurado {
     flex: 1;
-    border: 1px solid var(--neon-principal);
+    border: 1px solid var(--borda-procurado);
     padding: 15px;
-    background-color: var(--fundo-dark);
+    background-color: var(--fundo-procurado);
     font-family: 'Spacemono' , monospace;
 }
 
@@ -267,7 +293,7 @@ h2 {
     font-family: 'Silkscreen' , sans-serif;
     font-size: 1.2rem;
     margin-bottom: 20px;
-    border-bottom: 1px solid var(--neon-principal);
+    border-bottom: 1px solid var(--linha-h3);
 }
 
 .imagemcisne {
@@ -334,7 +360,7 @@ h2 {
     border: 3px solid var(--neon-principal);
     padding: 25px 30px;
     max-width: 450px;
-    box-shadow: 0 0 15px var(--neon-principal);
+    box-shadow: 0 0 15px var(--boxshadowradar);
 }
 
 .balao-fala p {
@@ -431,6 +457,14 @@ h2 {
     text-align: center;
     box-shadow: 0 0 30px var(--corbordalogin);
     position: relative;
+}
+
+.modal-content h2 {
+    color: var(--neon-principal) !important;
+}
+
+.modal-content p {
+    color: var(--neon-principal) !important;
 }
 
 .modal-content input {

@@ -81,3 +81,34 @@ window.addEventListener('DOMContentLoaded', () => {
         if(modal) modal.style.display = 'none';
     }
 });
+
+function negarIdade() {
+    const container = document.getElementById('container-botoes');
+    const texto = document.getElementById('texto-modal');
+
+    // Altera o texto para dar o feedback de erro
+    texto.innerText = "ACESSO BLOQUEADO: Conteúdo impróprio para menores.";
+    texto.style.color = "#ff4444";
+
+    // Substitui os dois botões por apenas UM novo
+    container.innerHTML = `
+        <button class="botao-caos" onclick="tentarNovamente()" style="background-color: #ffd500; border-color: #ffd500; margin-top: 10px; border-radius: 10px">
+            Tentar Novamente
+        </button>
+    `;
+}
+
+function tentarNovamente() {
+    const container = document.getElementById('container-botoes');
+    const texto = document.getElementById('texto-modal');
+
+    // Restaura o texto original
+    texto.innerText = "Você confirma que tem mais de 18 anos para entrar no GrimeLife?";
+    texto.style.color = "var(--neon-principal)";
+
+    // Restaura os dois botões originais
+    container.innerHTML = `
+        <button class="botao-caos" onclick="confirmarIdade()">Sim, tenho +18</button>
+        <button class="botao-bloqueio" onclick="negarIdade()">Não, sou menor</button>
+    `;
+}
