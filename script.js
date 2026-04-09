@@ -126,3 +126,20 @@ window.addEventListener('DOMContentLoaded', () => {
         iniciarVerificacao();
     }
 });
+
+
+// item 1 da rubrica atender as 5 variaveis 
+
+const nomeJogo = "Grime Life";
+const modoDeJogo = "Singleplayer";
+const genJogo = "Indie/2D"
+const platJogo = "Web Browser / PC"
+const classJogo = "18 anos";
+
+// colocando os valores nos elementos do html com DOM
+
+document.getElementById("titulo-site").innerText = nomeJogo;
+document.getElementById("info-mododejogo").innerText = modoDeJogo;
+document.getElementById("info-gen").innerText = genJogo;
+document.getElementById("info-plat").innerText = platJogo;
+document.getElementById("info-etaria").innerText = classJogo;
