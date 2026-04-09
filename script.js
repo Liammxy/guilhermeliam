@@ -60,55 +60,57 @@ window.onclick = function(event) {
 function confirmarIdade() {
     // remove o desfoque do conteudo principal
     const main = document.getElementById('main-site');
-    main.classList.remove('blur-active');
+    if (main) main.classList.remove('blur-active'); //
 
     // esconde o modal de idade
     const modal = document.getElementById('modal-idade');
-    modal.style.display = 'none';
+    if (modal) modal.style.display = 'none'; //
 
     // salva no navegador pra n perguntarr de novo
-
-    localStorage.setItem('maiorDeIdade', 'true');
+    localStorage.setItem('maiorDeIdade', 'true'); //
 }
 
-//Verifica se ja confirmou antes ao carregar a pagina
+// Verifica se ja confirmou antes ao carregar a pagina
 window.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('maiorDeIdade') === 'true') {
+    if (localStorage.getItem('maiorDeIdade') === 'true') { //
         const main = document.getElementById('main-site');
         const modal = document.getElementById('modal-idade');
 
-        if(main) main.classList.remove('blur-active');
-        if(modal) modal.style.display = 'none';
+        if (main) main.classList.remove('blur-active'); //
+        if (modal) modal.style.display = 'none'; //
     }
 });
 
-function negarIdade() {
-    const container = document.getElementById('container-botoes');
+// Nova lógica para verificar a idade digitada
+function verificarIdadeInput() {
+    const input = document.getElementById('input-idade');
     const texto = document.getElementById('texto-modal');
+    const container = document.getElementById('container-entrada');
+    
+    if (!input) return;
+    const idade = parseInt(input.value);
 
-    // Altera o texto para dar o feedback de erro
-    texto.innerText = "ACESSO BLOQUEADO: Conteúdo impróprio para menores.";
-    texto.style.color = "#ff4444";
+    if (isNaN(idade) || idade <= 0) {
+        alert("Por favor, digite uma idade válida.");
+        return;
+    }
 
-    // Substitui os dois botões por apenas UM novo
-    container.innerHTML = `
-        <button class="botao-caos" onclick="tentarNovamente()" style="background-color: #ffd500; border-color: #ffd500; margin-top: 10px; border-radius: 10px">
-            Tentar Novamente
-        </button>
-    `;
-}
-
-function tentarNovamente() {
-    const container = document.getElementById('container-botoes');
-    const texto = document.getElementById('texto-modal');
-
-    // Restaura o texto original
-    texto.innerText = "Você confirma que tem mais de 18 anos para entrar no GrimeLife?";
-    texto.style.color = "var(--neon-principal)";
-
-    // Restaura os dois botões originais
-    container.innerHTML = `
-        <button class="botao-caos" onclick="confirmarIdade()">Sim, tenho +18</button>
-        <button class="botao-bloqueio" onclick="negarIdade()">Não, sou menor</button>
-    `;
+    if (idade >= 18) {
+        // Se for maior, chama a função que já limpa o site
+        confirmarIdade();
+    } else {
+        // Se for menor, bloqueia a interface
+        if (texto) {
+            texto.innerText = "ACESSO NEGADO: Conteúdo impróprio para menores.";
+            texto.style.color = "#ff4444";
+        }
+        
+        if (container) {
+            container.innerHTML = `
+                <button class="botao-caos" onclick="window.location.reload()" style="background-color: #444; margin-top: 10px; border-color: #fff;">
+                    Tentar Novamente
+                </button>
+            `;
+        }
+    }
 }

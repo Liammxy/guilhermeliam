@@ -27,19 +27,31 @@
     border: 2px solid #000;
 }
 
-.botao-bloqueio {
-    background-color: #333;
-    font-size: 1.1rem;
-    color: #ff4444;
-    border-radius: 10px;
-    border: 1px solid #ff4444;
-    padding: 10px;
-    font-family: 'Space Mono', monospace;
-    cursor: not-allowed; /* isso muda o mouse para o sinal de proinido */
-    transition: 0.3s;
+#input-idade {
+    background-color: #000;
+    color: #31ff31;
+    border: 2px solid #31ff31;
+    padding: 15px;
+    font-size: 1.5rem;
+    width: 100%;
+    max-width: 300px;
+    font-family: 'Spacemono', monospace;
+    text-align: center;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
-.botao-bloqueio:hover {
-    background-color: #ff4444;
-    color: #000;
+#input-idade::placeholder {
+    color: rgba(49, 255, 49, 0.5);
+    font-size: 1.2rem;
+}
+
+#container-entrada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
