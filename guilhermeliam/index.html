@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Grime Life</title>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="verificacao.css">
+        <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="icon" type="images/png" href="images/exxe.png">
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <script type="text/javascript" src="lightmode.js" defer></script>
+    </head>
+    <body class="lightmode"> <div id="modal-idade">
+        <div class="modal-idade-content">
+            <h2 id="titulo-modal">Área Restrita</h2>
+            <p id="texto-modal">Você confirma que tem mais de 18 anos para entrar no GrimeLife?</p>
+            <div id="container-botoes">
+            <button class="botao-caos" onclick="confirmarIdade()">Sim, tenho +18</button>
+            <button class="botao-bloqueio" onclick="negarIdade()">Não, sou menor</button>
+            </div>
+        </div>
+    </div>
+
+        <header class="header">
+            <div class="logo-container">
+            <div class="logo">
+                <img src="images/exxe.png" alt="EmojiLogo" class="logo-emoji">
+                GrimeLife
+            </div>
+
+            <button id="theme-switch">
+                <i class="ph ph-sun"></i>
+                <i class="ph ph-moon"></i>
+            </button>
+            </div>
+            
+            <nav class="menu">
+                <a href="#sobre-jogo">Inicio</a>
+                <a href="pages/jogar.html">Jogar</a>
+                <a href="pages/fotos.html">Fotos</a>
+                <a href="pages/contato.html">Contato</a>
+                <a href="javascript:void(0)" onclick="abrirLogin()" class="entrada">Login</a>
+            </nav>
+        </header>
+
+        <main class="conteudo-principal blur-active" id="main-site">
+
+            <div class="ajusteprimeiraparte">
+                <img src="images/sapodoido.png" alt="PersonagemGrimeLife" class="imagem-caos">
+                <div class="coluna-central">
+                <div class="balao-fala">
+                    <p>>>Tá olhando pro meu moletom? É a última coisa limpa nesse mundo sujo, não se acostuma</p>
+                </div>
+                <a href="pages/jogar.html" class="botao-caos">JOGAR</a>
+                </div>
+
+               <div class="coluna-radar">
+                <div class="radar-ponto"></div>
+                <p>STATUS: VIGILÂNCIA ATIVA</p>
+                <P>DRONES: 03</p>
+               </div>
+            </div>
+
+            <div class="layout-split">
+
+            <section class="sobre" id="sobre-jogo">
+                <h2>Sobre o Jogo</h2>
+                <p>Grime Life é um jogo de exploração urbana em um mundo caótico, sujo e cheio de personalidade. Você joga como um jovem grafiteiro que vaga por uma cidade decadente dominada por concreto, poluição e personagens estranhos.</p>
+
+                <p>Explore telhados, becos, prédios abandonados e cantos escondidos da cidade enquanto deixa sua marca com grafites espalhados pelo mapa. Cada lugar tem segredos, caminhos alternativos e situações inesperadas esperando para serem descobertas</p>
+
+                <p>No meio desse ambiente estranho e meio absurdo, você vai encontrar personagens excêntricos, diálogos bizarros e momentos engraçados que fazem parte da vida caótica da cidade</p>
+
+                <p>Suba em estruturas, procure locais difíceis de alcançar e transforme a cidade em sua galeria de arte ilegal. Quanto mais você explora, mais descobre sobre os mistérios e a estranha realidade desse lugar</p>
+
+                <p>Grime Life é uma experiência livre, onde o objetivo principal é explorar, se expressar e aproveitar o caos urbano</p>
+            </section>
+            <aside class="status-mundo">
+                <h3>SISTEMA_STATUS</h3>
+                <div class="status-item">
+                    <span>POLUIÇÃO</span>
+                    <div class="barra">
+                        <div class="progresso" style="width: 90%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="status-item">
+                    <span>VIGILÂNCIA</span>
+                    <div class="barra">
+                        <div class="progresso" style="width: 75%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="status-item">
+                    <span>CONCRETO</span>
+                    <div class="barra">
+                        <div class="progresso" style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+                <p class="alerta">AVISO: AR IMPRÓPRIO</p>
+
+                <div class="log-grime">
+                    <h3>NOTÍCIAS__LIXO</h3>
+                    <p>> [INFO] Alguém roubou o cigarro do Bituca de novo.</p>
+                    <p>> [ALERTA] 40% de chance de chuva de graxa hoje.</p>
+                    <p>> [DICA] Não lamba as paredes do beco 4. Confia.</p>
+                    <p>> [ALERTA] Nuvem de spray tóxico detectada no Setor Sul. Use máscara ou prenda a respiração por 20 minutos.</p>
+                    <p>> [AVISO] A água do canal agora brilha no escuro. Não beba, a não ser que queira virar uma lanterna.</p>
+                </div>
+            </aside>
+
+            <aside class="conteudo-procurado">
+                <h3>Procurado</h3>
+                <div class="imagemcisne">
+                <img src="images/cisneredimensionado.png">
+                </div>
+
+                <div class="perfil-criminoso">
+                    <h2 class="status-procurado">PICHADOR VÂNDALO NÍVEL 5</h2>
+
+                    <div class="bio-cisne">
+                        <p>
+                            O desgraçado <span class="vulgo">CISNE NEGRO</span> costumava desenhar navios cargueiros, mas percebeu que era mais divertido vazar óleo neles.
+                        </p>
+                        <h4>RECOMPENSA:</h4>
+                        <p> 10 LATINHAS </p>
+                    </div>
+                </div>
+            </aside>
+            </section>
+        </main>
+
+            <div id="modal-login" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" onclick="fecharLogin()">&times;</span>
+                    <h2 class="subtitulo-caixa">ACESSO AO SISTEMA</h2>
+
+                    <form class="formulario-contato">
+                        <input type="text" placeholder="USUÁRIO" required>
+                        <input type="password" placeholder="SENHA" required>
+                        <button type="submit" class="botao-caos">ENTRAR</button>
+                    </form>
+                </div>
+            </div>
+            <script src="script.js"></script>
+            
+        <footer>
+            <p>2026 - Todos os direitos reservados (Desenvolvido por Liam) </p>
+        </footer>
+    </body>
+</html>

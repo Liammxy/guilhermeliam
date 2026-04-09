@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grime Life - Jogar</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="interface.css">
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="images/png" href="../images/exxe.png">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="text/javascript" src="../lightmode.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+        <div class="logo">
+            <img src="../images/exxe.png" alt="EmojiLogo" class="logo-emoji">
+            GrimeLife
+        </div>
+
+        <button id="theme-switch">
+                <i class="ph ph-sun"></i>
+                <i class="ph ph-moon"></i>
+            </button>
+        </div>
+
+        <nav class="menu">
+            <a href="../index.html">Inicio</a>
+            <a href="#area-do-jogo" class="link-menu">Jogar</a>
+            <a href="fotos.html">Fotos</a>
+            <a href="contato.html">Contato</a>
+            <a href="javascript:void(0)" onclick="abrirLogin()" class="entrada">Login</a>
+        </nav>
+    </header>
+
+    <main class="container-jogo">
+        <section class="caixa-mensagem">
+            <h2>Boa diversão, usuário!</h2>
+            <p>O sistema Grime Life está pronto para você!</p>
+        </section>
+
+        <section class="caixa-jogo" id="area-do-jogo">
+            <div class="moldura-jogo">
+                <p class="status-sistema">[ SISTEMA GRIME LIFE OPERACIONAL ]</p>
+                <button id="botao-jogar" class="botao-neon">
+                    JOGAR
+                </button>
+            </div>
+        </section>
+
+        <section class="caixa-informativa">
+            <h2>INFORMAÇÕES DE SOBREVIVÊNCIA</h2>
+            <div class="conteudo-informativo">
+                <p><strong>Fique longe da água, não tente nadar!</strong> A água deste setor está 98% composta por resíduos químicos. Se cair, você não boia, você derrete.</p>
+                <p><strong>HIDRATAÇÃO:</strong> Beber qualquer coisa que venha da torneira do distrito causará falha orgânica em 3 segundos. Mantenha-se seco, mantenha-se vivo.</p>
+                <p><strong>AVISO:</strong>Não lamba as paredes. O grafite ainda está fresco e o solvente é alucinógeno.</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="fecharLogin()">&times;</span>
+            <h2 class="subtitulo-caixa">ACESSO AO SISTEMA</h2>
+
+            <form class="formulario-contato">
+                <input type="text" placeholder="USUÁRIO" required>
+                <input type="password" placeholder="SENHA" required>
+                <button type="submit" class="botao-caos">ENTRAR</button>
+            </form>
+        </div>
+    </div>
+    <script src="../script.js"></script>
+
+    <footer>
+        <p>2026 - Todos os direitos reservados (Desenvolvido por Liam) </p>
+    </footer>
+</body>
+</html>

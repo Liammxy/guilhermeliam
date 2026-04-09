@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grime Life - Contato</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="interface.css">
+    <link rel="stylesheet" href="galeria.css">
+    <link rel="stylesheet" href="contato.css">
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="images/png" href="../images/exxe.png">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="text/javascript" src="../lightmode.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+        <div class="logo">
+            <img src="../images/exxe.png" alt="EmojiLogo" class="logo-emoji">
+            GrimeLife
+        </div>
+
+        <button id="theme-switch">
+                <i class="ph ph-sun"></i>
+                <i class="ph ph-moon"></i>
+            </button>
+        </div>
+
+        <nav class="menu">
+            <a href="../index.html">Inicio</a>
+            <a href="jogar.html#area-do-jogo" class="link-menu">Jogar</a>
+            <a href="fotos.html" class="active">Fotos</a>
+            <a href="#contatoaqui">Contato</a>
+            <a href="javascript:void(0)" onclick="abrirLogin()" class="entrada">Login</a>
+        </nav>
+    </header>
+
+    <main class="container-contato" id="contatoaqui">
+        <h1 class="titulo-sessao">[ PROTOCOLO DE COMUNICAÇÃO ]</h1>
+        <div class="grid-contato">
+            <section class="caixa-informativa">
+                <h2 class="subtitulo-caixa">IDENTIFICAÇÃO: LIAM</h2>
+                <p>Desenvolvedor focado em experiências visuais caóticas e imersivas. Criador do universo Grime Life.</p>
+                <div class="lista-contatos">
+                    <p><strong>LOCALIZAÇÃO:</strong>SETOR-AA4 (BRASIL)</p>
+
+                    <p><strong>DISCORD: liam#0000</strong></p>
+
+                    <p><strong>GITHUB:</strong> /liammxy</p>
+
+                    <p><strong>EMAIL:</strong>guilhermeliamm@hotmail.com</p>
+                </div>
+            </section>
+
+            <section class="caixa-feedback">
+                <h2 class="subtitulo-caixa">LOG DE FEEDBACK</h2>
+                <form class="formulario-contato">
+                    <input type="text" placeholder="NOME DO USUÁRIO" required>
+                    <input type="email" placeholder="EMAIL" required>
+                    <textarea rows="4" placeholder="RELÁTORIO DE CAMPO..."></textarea>
+                    <button type="submit" class="botao-caos botao-contato">TRANSMITIR DADOS</button>
+                </form>
+            </section>
+        </div>
+
+        <div class="container-botao-final">
+            <a href="jogar.html" class="botao-caos botao-contato-voltar">JOGAR</a>
+        </div>
+    </main>
+
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="fecharLogin()">&times;</span>
+            <h2 class="subtitulo-caixa">ACESSO AO SISTEMA</h2>
+
+            <form class="formulario-contato">
+                <input type="text" placeholder="USUÁRIO" required>
+                <input type="password" placeholder="SENHA" required>
+                <button type="submit" class="botao-caos">ENTRAR</button>
+            </form>
+        </div>
+    </div>
+    <script src="../script.js"></script>
+    
+    <footer>
+        <p>2026 - Todos os direitos reservados (Desenvolvido por Liam) </p>
+    </footer>
+</body>
+</html>

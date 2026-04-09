@@ -1,0 +1,215 @@
+:root {
+ --neon-principal: #ffffff;  
+ --neon-suave: #460043; /* o verde claro dos textos */
+ --fundo-dark: #f0a5ff; /* o preto do body */
+ --fundo-caixa: #c23ccc; /* o cinza escuro das caixas */
+ --fundo-input: #ff00dd; /* o fundo preto puro dos input */
+ --borda-input: #fb00ff; /* o cinza das bordas desativadas */
+ --fundo-negro: rgb(178, 58, 205); /* fundo header */
+
+  /* efeitos glow */
+  --sombra-neon: 0 0 15px rgba(144, 3, 130, 0.2);
+  --sombra-botao: #e77ffa; /* o brilho forte do botao */
+  --sombra-radar: rgb(255, 255, 255); /* parte que gira no radar */
+  --cor-botaojogar: #ffffff;
+  --cor-hover-menu: ##aefcff;
+  --cor-cisnenegronome: #5f0342;
+  --sombradotexto:rgba(255, 255, 255, 0.7);
+  --sombrahoverfotos: rgba(255, 255, 255, 0.9);
+  --backgroundlegenda: rgba(245, 105, 255, 0.9);
+  --sombracaixainformativa: rgb(208, 84, 239);
+}
+
+.lightmode {
+ --neon-principal: #31ff31;  
+ --neon-suave: #a2fca2; /* o verde claro dos textos */
+ --fundo-dark: #111; /* o preto do body */
+ --fundo-caixa: #1a1a1a; /* o cinza escuro das caixas */
+ --fundo-input: #000000; /* o fundo preto puro dos input */
+ --borda-input: #333333; /* o cinza das bordas desativadas */
+ --fundo-negro: rgb(0, 0, 0); /* fundo header */
+
+  /* efeitos glow */
+  --sombra-neon: 0 0 15px rgba(49, 255, 49, 0.2);
+  --sombra-botao: #31ff31; /* o brilho forte do botao */
+  --sombra-radar: rgba(49, 255, 49, 0.3); /* parte que gira no radar */
+  --cor-botaojogar: #ff9900;
+  --cor-hover-menu: #ffff00;
+  --cor-cisnenegronome: #00ff00;
+  --sombradotexto:rgba(49, 255, 49, 0.7);
+  --sombrahoverfotos: rgba(9, 255, 49, 0.9);
+  --backgroundlegenda: rgba(49, 255, 49, 0.9);
+  --sombracaixainformativa: rgba(49, 255, 49, 0.2);
+}
+
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: var(--neon-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--fundo-negro);
+}
+
+#theme-switch i {
+    fill: var(--neon-principal);
+}
+
+#theme-switch i:last-child {
+    display: none;
+}
+
+.lightmode #theme-switch  i:first-child {
+    display: none;
+}
+
+.lightmode #theme-switch i:last-child {
+    display: block;
+}
+
+#theme-switch:hover {
+    box-shadow: var(--sombra-botao);
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.container-contato {
+    padding-top: 140px;
+    padding-bottom: 80px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    scroll-margin-top: -115px;
+}
+
+.grid-contato {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    width: 90%;
+    max-width: 1000px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.titulo-sessao {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.caixa-informativa, .caixa-feedback {
+    font-family: 'Spacemono', monospace;
+    background-color: var(--fundo-caixa);
+    border: 2px solid var(--sombra-botao);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 15px var(--sombracaixainformativa);
+    text-align: left;
+    flex: 1 1 400px;
+    max-width: 450px;
+    color: var(--neon-suave);
+}
+
+.subtitulo-caixa {
+    font-family: 'Silkscreen', sans-serif;
+    color: var(--neon-principal);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--sombra-botao);
+    padding-bottom: 10px;
+}
+
+.formulario-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario-contato input, .formulario-contato textarea {
+    background: #000;
+    border: 1px solid #333;
+    color: var(--neon-principal);
+    padding: 10px;
+    font-family: 'Silkscreen', sans-serif;
+    outline: none;
+}
+
+.formulario-contato input:focus {
+    border-color: var(--sombra-botao);
+}
+
+.botao-contato {
+    width: 100% !important;
+    height: 45px !important;
+    font-size: 0.8rem !important;
+    background-color: var(--neon-principal) !important;
+    border-color: var(--sombra-botao) !important;
+    box-shadow: 0 0 15px var(--sombra-botao) !important;
+    color: #000 !important;
+}
+
+.container-botao-final {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+
+    * {
+        box-sizing: border-box;
+    }
+    .container-contato {
+        padding-top: 220px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        width: 100% !important;
+        overflow-x: hidden;
+    }
+
+    .grid-contato {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 25px !important;
+        width: 100% !important;
+    }
+    
+    .caixa-informativa, .caixa-feedback {
+        width: 100% !important;
+        max-width: 100%;
+        min-width: 0 !important;
+        height: auto !important;
+        padding: 20px !important;
+        margin:  0 0 20px 0 !important;
+    }
+
+    .caixa-informativa p, .caixa-informativa span, .caixa-informativa h3 {
+        text-align: left !important;
+        display: block !important;
+        width: 100% !important;
+        margin-bottom: 10px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 10px !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        word-break: break-all !important;
+    }
+
+    .subtitulo-caixa {
+        font-size: 1.1rem !important;
+        text-align: left !important;
+        width: 100% !important;
+    }
+}

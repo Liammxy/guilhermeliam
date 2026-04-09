@@ -1,0 +1,203 @@
+:root {
+ --neon-principal: #ffffff;  
+ --neon-suave: #460043; /* o verde claro dos textos */
+ --fundo-dark: #f0a5ff; /* o preto do body */
+ --fundo-caixa: #c23ccc; /* o cinza escuro das caixas */
+ --fundo-input: #ff00dd; /* o fundo preto puro dos input */
+ --borda-input: #fb00ff; /* o cinza das bordas desativadas */
+ --fundo-negro: rgb(178, 58, 205); /* fundo header */
+
+  /* efeitos glow */
+  --sombra-neon: 0 0 15px rgba(144, 3, 130, 0.2);
+  --sombra-botao: #e77ffa; /* o brilho forte do botao */
+  --sombra-radar: rgb(255, 255, 255); /* parte que gira no radar */
+  --cor-botaojogar: #ffffff;
+  --cor-hover-menu: #aefcff;
+  --cor-cisnenegronome: #5f0342;
+  --sombradotexto:rgba(255, 255, 255, 0.7);
+  --sombrahoverfotos: rgba(255, 255, 255, 0.9);
+  --backgroundlegenda: rgba(245, 105, 255, 0.9);
+}
+
+.lightmode {
+ --neon-principal: #31ff31;  
+ --neon-suave: #a2fca2; /* o verde claro dos textos */
+ --fundo-dark: #111; /* o preto do body */
+ --fundo-caixa: #1a1a1a; /* o cinza escuro das caixas */
+ --fundo-input: #000000; /* o fundo preto puro dos input */
+ --borda-input: #333333; /* o cinza das bordas desativadas */
+ --fundo-negro: rgb(0, 0, 0); /* fundo header */
+
+  /* efeitos glow */
+  --sombra-neon: 0 0 15px rgba(49, 255, 49, 0.2);
+  --sombra-botao: #31ff31; /* o brilho forte do botao */
+  --sombra-radar: rgba(49, 255, 49, 0.3); /* parte que gira no radar */
+  --cor-botaojogar: #ff9900;
+  --cor-hover-menu: #ffff00;
+  --cor-cisnenegronome: #00ff00;
+  --sombradotexto:rgba(49, 255, 49, 0.7);
+  --sombrahoverfotos: rgba(9, 255, 49, 0.9);
+  --backgroundlegenda: rgba(49, 255, 49, 0.9);
+}
+
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: var(--neon-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--fundo-negro);
+}
+
+#theme-switch i {
+    fill: var(--neon-principal);
+}
+
+#theme-switch i:last-child {
+    display: none;
+}
+
+.lightmode #theme-switch  i:first-child {
+    display: none;
+}
+
+.lightmode #theme-switch i:last-child {
+    display: block;
+}
+
+#theme-switch:hover {
+    box-shadow: var(--sombra-botao);
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.container-galeria {
+    padding-top: 120px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 60px;
+    min-height: 80vh;
+}
+
+.titulo-sessao {
+    text-align: center;
+    color: var(--neon-principal);
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px var(--sombradotexto);
+}
+
+.subtitulo-galeria {
+    text-align: center;
+    color: var(--neon-principal);
+    font-family: 'Spacemono', monospace;
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+}
+
+.grid-fotos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    gap: 25px;
+    max-width: 1100;
+    margin: 0 auto;
+}
+
+.item-foto {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--sombra-botao);
+    background-color: #000;
+}
+
+.item-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%) brightness(0.6);
+    transition: 0.5s;
+}
+
+.item-foto:hover {
+    transform: scale(1.03);
+    border-color: var(--sombra-botao);
+    box-shadow: 0 0 25px var(--sombrahoverfotos);
+    z-index: 5;
+}
+
+.item-foto:hover img {
+    filter: grayscale(0%) brightness(1);
+}
+
+.legenda {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    background: var(--backgroundlegenda);
+    color: #000;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 0.75rem;
+    padding: 10px 0;
+    text-align: center;
+    transform: translateY(100%);
+    transition: 0.3s ease-out
+}
+
+.item-foto:hover .legenda {
+    transform: translateY(0);
+}
+
+#artes {
+    scroll-margin-top: 115px;
+}
+
+.container-botao-final {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .container-galeria {
+        padding-top: 220px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .grid-fotos {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+
+    .item-foto {
+        height: 250px;
+    }
+
+    .titulo-sessao {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .subtitulo-galeria {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .legenda {
+        transform: translateY(0);
+        background-color: var(--backgroundlegenda);
+        font-size: 0.65rem;
+    }
+}

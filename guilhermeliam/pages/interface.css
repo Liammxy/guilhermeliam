@@ -1,0 +1,210 @@
+:root {
+ --neon-principal: #ffffff;  
+ --neon-suave: #460043; /* o verde claro dos textos */
+ --fundo-dark: #f0a5ff; /* o preto do body */
+ --fundo-caixa: #c23ccc; /* o cinza escuro das caixas */
+ --fundo-input: #ff00dd; /* o fundo preto puro dos input */
+ --borda-input: #fb00ff; /* o cinza das bordas desativadas */
+ --fundo-negro: rgb(178, 58, 205); /* fundo header */
+
+  /* efeitos glow */
+  --sombra-neon: 0 0 15px rgba(144, 3, 130, 0.2);
+  --sombra-botao: #e77ffa; /* o brilho forte do botao */
+  --sombra-radar: rgb(255, 255, 255); /* parte que gira no radar */
+  --cor-botaojogar: #ffffff;
+  --cor-hover-menu: #aefcff;
+  --cor-cisnenegronome: #5f0342;
+  --sombradotexto:rgba(255, 255, 255, 0.7);
+}
+
+.lightmode {
+ --neon-principal: #31ff31;  
+ --neon-suave: #a2fca2; /* o verde claro dos textos */
+ --fundo-dark: #111; /* o preto do body */
+ --fundo-caixa: #1a1a1a; /* o cinza escuro das caixas */
+ --fundo-input: #000000; /* o fundo preto puro dos input */
+ --borda-input: #333333; /* o cinza das bordas desativadas */
+ --fundo-negro: rgb(0, 0, 0); /* fundo header */
+
+  /* efeitos glow */
+  --sombra-neon: 0 0 15px rgba(49, 255, 49, 0.2);
+  --sombra-botao: #31ff31; /* o brilho forte do botao */
+  --sombra-radar: rgba(49, 255, 49, 0.3); /* parte que gira no radar */
+  --cor-botaojogar: #ff9900;
+  --cor-hover-menu: #ffff00;
+  --cor-cisnenegronome: #00ff00;
+  --sombradotexto:rgba(49, 255, 49, 0.7);
+}
+
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: var(--neon-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--fundo-negro);
+}
+
+#theme-switch i {
+    fill: var(--neon-principal);
+}
+
+#theme-switch i:last-child {
+    display: none;
+}
+
+.lightmode #theme-switch  i:first-child {
+    display: none;
+}
+
+.lightmode #theme-switch i:last-child {
+    display: block;
+}
+
+#theme-switch:hover {
+    box-shadow: var(--sombra-botao);
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.container-jogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 150px;
+    padding: 40px;
+}
+
+.caixa-mensagem {
+    background-color: var(--fundo-negro);
+    border: 2px solid var(--sombra-botao);
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 5px var(--sombra-botao);
+    max-width: 600px;
+}
+
+.caixa-mensagem h2 {
+    font-family: 'Silkscreen', sans-serif;
+    color: var(--neon-principal);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.caixa-mensagem p {
+    font-family: 'Spacemono', monospace;
+    letter-spacing: 1px;
+    color: var(--neon-suave);
+}
+
+.caixa-jogo {
+    background-color: var(--fundo-dark);
+    border: 3px solid var(--sombra-botao);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    box-shadow: 0 0 20px var(--sombra-botao);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    scroll-margin-top: 200px;
+}
+
+.moldura-jogo {
+    text-align: center;
+    width: 100%;
+}
+
+.status-sistema {
+    color: var(--neon-suave);
+    font-family: 'Spacemono', monospace;
+    font-size: 1rem;
+    margin-bottom: 40px;
+    text-shadow: 0 0 5px rgba(49, 255, 49, 0.7);
+}
+
+.botao-neon {
+    width: 100%;
+    max-width: 450px;
+    height: 60px;
+    background-color: var(--cor-botaojogar);
+    color: #000000;
+    border: 3px solid var(--cor-botaojogar);
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0,3s;
+    border-radius: 5px;
+    box-shadow: 0 0 15px var(--cor-botaojogar);
+}
+
+.botao-neon:hover {
+    background-color: var(--cor-hover-menu);
+    color: #000000;
+    border: 3px solid var(--cor-hover-menu)0;
+    box-shadow: 0 0 39px var(--cor-hover-menu);
+    transform: scale(1.05);
+}
+
+.botao-neon:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 10px var(--cor-hover-menu);
+}
+
+.caixa-informativa {
+    background-color: var(--fundo-negro);
+    border: 3px solid var(--sombra-botao);
+    border-radius: 10px;
+    width: 95%;
+    max-width: 1100px;
+    min-height: 250px;
+    padding: 30px;
+    box-shadow: 0 0 20px var(--sombra-botao);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-informativa h2 {
+    font-family: 'Silkscreen', sans-serif;
+    color: var(--neon-principal);
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    text-shadow: 0 0 5px var(--sombradotexto);
+}
+
+.conteudo-informativo {
+    width: 100%;
+    max-width: 900px;
+    text-align: left;
+}
+
+.conteudo-informativo p {
+    color: var(--neon-suave);
+    font-family: 'Spacemono', monospace;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.conteudo-informativo p strong {
+    color: var(--cor-hover-menu);
+    text-shadow: 0 0 5px var(--sombradotexto);
+}
