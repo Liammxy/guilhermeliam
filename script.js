@@ -57,60 +57,72 @@ window.onclick = function(event) {
 
 
 // parte da idade
-function confirmarIdade() {
-    // remove o desfoque do conteudo principal
-    const main = document.getElementById('main-site');
-    if (main) main.classList.remove('blur-active'); //
 
-    // esconde o modal de idade
-    const modal = document.getElementById('modal-idade');
-    if (modal) modal.style.display = 'none'; //
+// pega o ano atual do sistema e compara com o ano de lançamento do GrimeLife
+const ANO_LANCAMENTO = 2026;
+let anoAtual = new Date().getFullYear();
 
-    // salva no navegador pra n perguntarr de novo
-    localStorage.setItem('maiorDeIdade', 'true'); //
+if (anoAtual === ANO_LANCAMENTO) {
+    alert("📢 NOTÍCIA: Este jogo é um GRANDE LANÇAMENTO deste ano!");
 }
 
-// Verifica se ja confirmou antes ao carregar a pagina
-window.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('maiorDeIdade') === 'true') { //
-        const main = document.getElementById('main-site');
-        const modal = document.getElementById('modal-idade');
+// manipulação do dom (o porteiro do meu site)
+function confirmarIdade(nome) {
+    const main = document.getElementById('main-site');
+    const modal = document.getElementById('modal-idade');
 
-        if (main) main.classList.remove('blur-active'); //
-        if (modal) modal.style.display = 'none'; //
-    }
-});
+    if (main) main.classList.remove('blur-active');
+    if (modal) modal.style.display = 'none';
 
-// Nova lógica para verificar a idade digitada
-function verificarIdadeInput() {
-    const input = document.getElementById('input-idade');
-    const texto = document.getElementById('texto-modal');
-    const container = document.getElementById('container-entrada');
+    localStorage.setItem('maiorDeIdade', 'true');
+}
+
+// inicio da verificacao e os alertas que vao ser disparados
+function iniciarVerificacao() {
+    let nomeVisitante = prompt("Bem-vindo ao site! Qual é o seu nome?");
     
-    if (!input) return;
-    const idade = parseInt(input.value);
+    // se o usuário clicar em cancelar no nome, usa esse padrão
+    if (!nomeVisitante) nomeVisitante = "Visitante";
 
-    if (isNaN(idade) || idade <= 0) {
-        alert("Por favor, digite uma idade válida.");
-        return;
-    }
+    let idadeVisitante = prompt("Olá, " + nomeVisitante + "! Qual é a sua idade para acessar o GrimeLife?");
+    let idade = parseInt(idadeVisitante);
 
     if (idade >= 18) {
-        // Se for maior, chama a função que já limpa o site
-        confirmarIdade();
+        // permissao concedida
+        alert("Parabéns, " + nomeVisitante + "! Seu acesso foi liberado com sucesso.");
+        confirmarIdade(nomeVisitante);
     } else {
-        // Se for menor, bloqueia a interface
-        if (texto) {
-            texto.innerText = "ACESSO NEGADO: Conteúdo impróprio para menores.";
-            texto.style.color = "#ff4444";
-        }
+        // permissao negada
+        alert("Poxa, " + nomeVisitante + "... Você ainda não tem idade para acessar este conteúdo.");
         
-        if (container) {
-            container.innerHTML = `
-                <button class="botao-caos" onclick="window.location.reload()" style="background-color: #444; margin-top: 10px; border-color: #fff;">
-                    Tentar Novamente
-                </button>
-            `;
-        }
+        // se falhar no prompt, mostra o Modal com o Input (para atender a outra rubrica)
+        const modal = document.getElementById('modal-idade');
+        if (modal) modal.style.display = 'flex';
+        
+        const textoModal = document.getElementById('texto-modal');
+        if (textoModal) textoModal.innerText = nomeVisitante + ", use o campo abaixo para verificar sua idade novamente:";
     }
 }
+
+// input de texto para saudação personalizada
+function verificarIdadeInput() {
+    const input = document.getElementById('input-idade');
+    let idade = parseInt(input.value);
+
+    if (idade >= 18) {
+        // atende a rubrica de saudação personalizada dinâmica
+        alert("Sistema validado! Usuário de " + idade + " anos detectado.");
+        confirmarIdade();
+    } else {
+        alert("Acesso ainda negado. Você informou ter " + idade + " anos.");
+    }
+}
+
+// --- DISPARO AUTOMÁTICO ---
+window.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('maiorDeIdade') === 'true') {
+        confirmarIdade();
+    } else {
+        iniciarVerificacao();
+    }
+});
