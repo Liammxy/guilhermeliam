@@ -556,7 +556,7 @@ footer p {
     margin: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
     .ajusteprimeiraparte, .layout-split {
         display: flex !important;
         flex-direction: column !important;
