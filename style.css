@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 :root {
  --neon-principal: #fff700;  
  --neon-suave: #000000; /* o verde claro dos textos */
