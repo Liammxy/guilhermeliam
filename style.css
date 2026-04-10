@@ -622,6 +622,14 @@ footer p {
         margin: 10px auto;
     }
 
+    .log-grime h3 {
+        font-size: 1.2rem;
+    }
+
+    .log-grime p {
+        font-size: 0.9rem;
+    }
+
     footer {
         padding: 20px;
         flex-direction: column;
