@@ -55,17 +55,19 @@ window.onclick = function(event) {
     }
 }
 
+// Pega o nome do arquivo atual da URL
+const paginaAtual = window.location.pathname.split("/").pop();
 
-// parte da idade
+// Só executa o código se estiver na index.html ou na raiz (/)
+if (paginaAtual === "index.html" || paginaAtual === "") {
+    // --- SEU CÓDIGO DE LANÇAMENTO ---
+    const ANO_LANCAMENTO = 2026;
+    let anoAtual = new Date().getFullYear();
 
-// pega o ano atual do sistema e compara com o ano de lançamento do GrimeLife
-const ANO_LANCAMENTO = 2026;
-let anoAtual = new Date().getFullYear();
-
-if (anoAtual === ANO_LANCAMENTO) {
-    alert("📢 NOTÍCIA: Este jogo é um GRANDE LANÇAMENTO deste ano!");
+    if (anoAtual === ANO_LANCAMENTO) {
+        alert("📢 NOTÍCIA: Este jogo é um GRANDE LANÇAMENTO deste ano!");
+    }
 }
-
 // manipulação do dom (o porteiro do meu site)
 function confirmarIdade(nome) {
     const main = document.getElementById('main-site');

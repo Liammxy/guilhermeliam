@@ -1,19 +1,20 @@
 :root {
- --neon-principal: #ffffff;  
- --neon-suave: #460043; /* o verde claro dos textos */
- --fundo-dark: #f0a5ff; /* o preto do body */
- --fundo-caixa: #c23ccc; /* o cinza escuro das caixas */
- --fundo-input: #ff00dd; /* o fundo preto puro dos input */
- --borda-input: #fb00ff; /* o cinza das bordas desativadas */
- --fundo-negro: rgb(178, 58, 205); /* fundo header */
+ --neon-principal: #fff700;  
+ --neon-suave: #d4ff00; /* o verde claro dos textos */
+ --fundo-dark: #f2ff00; /* o preto do body */
+ --fundo-caixa: #878787; /* o cinza escuro das caixas */
+ --fundo-input: #707070; /* o fundo preto puro dos input */
+ --borda-input: #000000; /* o cinza das bordas desativadas */
+ --fundo-negro: rgb(24, 24, 24); /* fundo header */
+ --titulo-jogoarea: #000000;
 
   /* efeitos glow */
-  --sombra-neon: 0 0 15px rgba(144, 3, 130, 0.2);
-  --sombra-botao: #e77ffa; /* o brilho forte do botao */
+  --sombra-neon: 0 0 15px rgb(255, 238, 0);
+  --sombra-botao: #ffd000; /* o brilho forte do botao */
   --sombra-radar: rgb(255, 255, 255); /* parte que gira no radar */
   --cor-botaojogar: #ffffff;
-  --cor-hover-menu: #aefcff;
-  --cor-cisnenegronome: #5f0342;
+  --cor-hover-menu: #ffffa6;
+  --cor-cisnenegronome: #000000;
   --sombradotexto:rgba(255, 255, 255, 0.7);
 }
 
@@ -34,6 +35,7 @@
   --cor-hover-menu: #ffff00;
   --cor-cisnenegronome: #00ff00;
   --sombradotexto:rgba(49, 255, 49, 0.7);
+  --titulo-jogoarea: #a2fca2;
 }
 
 #theme-switch {
@@ -127,7 +129,7 @@
 }
 
 .status-sistema {
-    color: var(--neon-suave);
+    color: var(--titulo-jogoarea);
     font-family: 'Spacemono', monospace;
     font-size: 1rem;
     margin-bottom: 40px;
