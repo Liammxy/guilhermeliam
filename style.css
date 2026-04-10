@@ -106,9 +106,11 @@ body{
     overflow-x: hidden;
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('images/planoroxo.png');
     background-size: cover;
+    max-width: 100vw;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow: hidden;
 }
 
 body:not(.lightmode) {
