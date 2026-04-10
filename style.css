@@ -281,6 +281,11 @@ h2 {
     font-size: 0.8rem;
 }
 
+.log-grime p {
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
 .conteudo-procurado {
     flex: 1;
     border: 1px solid var(--borda-procurado);
