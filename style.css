@@ -27,6 +27,7 @@
   --linha-h3: #000;
   --cor-h2dosobre: #000;
   --boxshadowradar: #ffa200;
+  --borderlogin: #f2ff00;
 }
 
 .lightmode {
@@ -54,6 +55,7 @@
   --corhoverlogin: #26cc26;
   --linha-h3: #31ff31;
   --boxshadowradar: rgba(49, 255, 49, 0.4);
+  --borderlogin: #31ff31;
 }
 
 #theme-switch {
@@ -471,11 +473,11 @@ h2 {
     background-color: var(--fundo-caixa);
     margin: 10% auto;
     padding: 40px;
-    border: 2px solid var(--neon-principal);
+    border: 2px solid var(--borderlogin);
     border-radius: 15px;
     width: 350px;
     text-align: center;
-    box-shadow: 0 0 30px var(--corbordalogin);
+    box-shadow: 0 0 30px var(--borderlogin);
     position: relative;
 }
 
