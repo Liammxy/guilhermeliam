@@ -567,13 +567,18 @@ footer p {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
+        justify-content: center !important;
         width: 100% !important;
+        margin: 0 !important;
     }
+
     aside, main {
-        width: 95% !important;
+        width: 90% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block !important;
         max-width: 100% !important;
         min-width: 0 !important;
-        margin: 10px 0 !important;
     }
 
     .header {

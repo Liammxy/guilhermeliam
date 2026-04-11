@@ -210,3 +210,41 @@
     color: var(--cor-hover-menu);
     text-shadow: 0 0 5px var(--sombradotexto);
 }
+
+@media screen and (max-width: 768px) {
+    /* 1. Centraliza a navegação e ajusta o espaçamento */
+    nav {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 15px !important; /* Espaço entre os links do menu */
+        padding: 10px !important;
+    }
+
+    /* 2. Ajusta os links do menu para serem mais fáceis de tocar */
+    nav a {
+        font-size: 1.1rem !important;
+        padding: 8px 12px !important;
+    }
+
+    /* 3. Ajusta o container da logo e botões do topo (Foto 36) */
+    .interface-header {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* 4. Centraliza botões de ação (como o de Jogar) */
+    .botao-jogar, .btn-acao {
+        width: 80% !important; /* Botão maior para facilitar o clique */
+        max-width: 300px !important;
+        margin: 15px auto !important;
+        display: block !important;
+    }
+
+    /* 5. Ajusta o tamanho de ícones ou imagens de interface (Foto 41) */
+    .icones-status img {
+        width: 40px !important;
+        height: auto !important;
+    }
+}
