@@ -2,18 +2,17 @@ const botaoJogar = document.getElementById('botao-jogar');
 const caixaDoJogo = document.querySelector('.moldura-jogo'); 
 const textoStatus = document.querySelector('.status-sistema');
 
-// Criamos o iframe via JS para garantir que ele só exista quando necessário
-// ou você pode usar o que já está no HTML se seguiu o passo anterior.
+// criamos o iframe via js para garantir que ele só exista quando necessário
 let iframeJogo = document.getElementById('iframe-jogo');
 
-// 2. FUNÇÃO PARA INICIAR O JOGO
+// FUNÇÃO PARA INICIAR O JOGO
 function iniciarLogicaDeJogo() {
     if (!caixaDoJogo) return;
 
     // Tenta colocar a moldura em tela cheia
     if (caixaDoJogo.requestFullscreen) {
         caixaDoJogo.requestFullscreen();
-    } else if (caixaDoJogo.webkitRequestFullscreen) { // Suporte para Safari/Chrome antigo
+    } else if (caixaDoJogo.webkitRequestFullscreen) {
         caixaDoJogo.webkitRequestFullscreen();
     }
 
@@ -23,7 +22,7 @@ function iniciarLogicaDeJogo() {
 
     // CONFIGURA E MOSTRA O IFRAME
     if (!iframeJogo) {
-        // Se o iframe não existir no HTML, nós criamos ele agora
+        // Se n tiver iframe no html cria agora
         iframeJogo = document.createElement('iframe');
         iframeJogo.id = "iframe-jogo";
         iframeJogo.setAttribute('allowfullscreen', '');
@@ -33,16 +32,16 @@ function iniciarLogicaDeJogo() {
         caixaDoJogo.appendChild(iframeJogo);
     }
 
-    iframeJogo.src = "../jogo/index.html"; // Caminho para o seu jogo
+    iframeJogo.src = "../jogo/index.html"; // Caminho para o jogo
     iframeJogo.style.display = "block";
 }
 
-// 3. ATRIBUIR O CLIQUE AO BOTÃO
+// ATRIBUIR O CLIQUE AO BOTÃO
 if (botaoJogar) {
     botaoJogar.onclick = iniciarLogicaDeJogo;
 }
 
-// 4. FUNÇÃO PARA DETECTAR SAÍDA DA TELA CHEIA (ESC)
+// FUNÇÃO PARA DETECTAR SAÍDA DA TELA CHEIA (ESC)
 function aoMudarTela() {
     // Verifica se NÃO há nenhum elemento em tela cheia
     const estaEmTelaCheia = document.fullscreenElement || document.webkitFullscreenElement;
@@ -50,13 +49,13 @@ function aoMudarTela() {
     if (!estaEmTelaCheia) {
         // O usuário saiu da tela cheia, então:
         
-        // 1. Para o jogo e o som limpando o SRC
+        //  Para o jogo e o som limpando o SRC
         if (iframeJogo) {
             iframeJogo.src = "";
             iframeJogo.style.display = "none";
         }
 
-        // 2. Mostra o botão e o texto de volta nas posições originais
+        // Mostra o botão e o texto de volta nas posições originais
         if (botaoJogar) {
             botaoJogar.style.display = "inline-block"; 
         }
@@ -66,7 +65,7 @@ function aoMudarTela() {
     }
 }
 
-// 5. ESCUTADORES DE EVENTO DE MUDANÇA DE TELA
+//  ESCUTADORES DE EVENTO DE MUDANÇA DE TELA
 document.addEventListener('fullscreenchange', aoMudarTela);
 document.addEventListener('webkitfullscreenchange', aoMudarTela);
 
