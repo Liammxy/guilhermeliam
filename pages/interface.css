@@ -74,7 +74,7 @@
     transform: scale(1.1);
     transition: 0.3s;
 }
-
+ /* inicio da main, estilizando em estilo de coluna */
 .container-jogo {
     display: flex;
     flex-direction: column;
@@ -83,7 +83,7 @@
     margin-top: 150px;
     padding: 40px;
 }
-
+/* primeira caixa na pagina */
 .caixa-mensagem {
     background-color: var(--fundo-negro);
     border: 2px solid var(--sombra-botao);
@@ -94,20 +94,20 @@
     box-shadow: 0 0 20px 5px var(--sombra-botao);
     max-width: 600px;
 }
-
+/* titulo na caixa */
 .caixa-mensagem h2 {
     font-family: 'Silkscreen', sans-serif;
     color: var(--neon-principal);
     margin-bottom: 15px;
     text-transform: uppercase;
 }
-
+/* texto dos paragrafos */
 .caixa-mensagem p {
     font-family: 'Spacemono', monospace;
     letter-spacing: 1px;
     color: var(--neon-suave);
 }
-
+/* caixa onde fica o jogo */
 .caixa-jogo {
     background-color: var(--fundo-dark);
     border: 3px solid var(--sombra-botao);
@@ -127,7 +127,7 @@
     text-align: center;
     width: 100%;
 }
-
+/* Texto que fica dentro da moldura do jogo */
 .status-sistema {
     color: var(--titulo-jogoarea);
     font-family: 'Spacemono', monospace;
@@ -135,7 +135,7 @@
     margin-bottom: 40px;
     text-shadow: 0 0 5px rgba(49, 255, 49, 0.7);
 }
-
+/* botao para abrir o jogo */
 .botao-neon {
     width: 100%;
     max-width: 450px;
@@ -168,7 +168,7 @@
     transform: scale(0.98);
     box-shadow: 0 0 10px var(--cor-hover-menu);
 }
-
+/* Caixa na parte inferior com algumas informações */
 .caixa-informativa {
     background-color: var(--fundo-negro);
     border: 3px solid var(--sombra-botao);
@@ -183,7 +183,7 @@
     align-items: center;
     justify-content: center;
 }
-
+/* titulo da caixa inferior */
 .caixa-informativa h2 {
     font-family: 'Silkscreen', sans-serif;
     color: var(--neon-principal);
@@ -205,38 +205,38 @@
     line-height: 1.6;
     margin-bottom: 15px;
 }
-
+/* cor do inicio dos textos */
 .conteudo-informativo p strong {
     color: var(--cor-hover-menu);
     text-shadow: 0 0 5px var(--sombradotexto);
 }
-
+/* parte responsiva */
 @media screen and (max-width: 768px) {
-    /* 1. Resetamos o container principal para ele crescer conforme o conteúdo */
+    /*  resetando o container principal para ele crescer em outra forma */
     .container-jogo {
         display: flex !important;
-        flex-direction: column !important; /* Empilha tudo */
-        height: auto !important;           /* Libera a altura fixa */
-        min-height: 100vh !important;      /* Garante que ocupe a tela toda */
-        padding: 40px 0 !important;        /* Espaço no topo e no fundo */
+        flex-direction: column !important; /* empilha tudo */
+        height: auto !important;           /* libera a altura fixa */
+        min-height: 100vh !important;      /* garante que ocupe a tela toda */
+        padding: 40px 0 !important;        /* espaço no topo e no fundo */
         align-items: center !important;
-        justify-content: flex-start !important; /* Alinha do topo para baixo */
+        justify-content: flex-start !important; /* alinha do topo para baixo */
     }
 
-    /* 2. ATENÇÃO AQUI: Separando as 3 caixas (Seletores e Login) */
+    /*  ATENÇÃO AQUI: Separando as 3 caixas (Seletores e Login) */
     /* Esse seletor pega as divs diretas (filhas) do container */
     .container-jogo > div, 
     .container-jogo > section,
     .botoes-container,
     .login-container {
-        margin-bottom: 60px !important;    /* ESPAÇO BEM GRANDE ENTRE AS CAIXAS */
+        margin-bottom: 60px !important;    /* espaço grande entre cada caixa */
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         width: 100% !important;
     }
 
-    /* 3. Ajuste para os botões dentro das caixas não colarem entre si */
+    /*  ajuste para os botões dentro das caixas não colarem entre si */
     .btn-personagem, 
     .login-container input {
         margin: 15px 0 !important;         /* Espaço entre um botão e outro */
@@ -244,7 +244,7 @@
         max-width: 300px !important;
     }
 
-    /* 4. Esconde os <br> que podem atrapalhar o Flexbox */
+    /*  esconde os <br> que podem atrapalhar o Flexbox */
     br {
         display: none !important;
     }

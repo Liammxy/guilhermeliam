@@ -128,7 +128,7 @@ body.lightmode {
     background-color: var(--fundo-dark);
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('images/planoroxo.png') !important;
 }
-
+/* CABEÇALHO */
 .header{
     position: fixed;
     top: 0;
@@ -143,13 +143,13 @@ body.lightmode {
     border: 3px solid var(--neon-principal);
     border-radius: 8px;
 }
-
+/* logo no cabeçalho */
 .logo-container {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-
+/* especificações da logo */
 .logo{
     display: flex;
     align-items: center;
@@ -167,7 +167,7 @@ body.lightmode {
     height: auto;
     filter: drop-shadow(0 0 5px #39ff14);
   }
-
+/* menu no header */
 .menu a{
     display: inline-block;
     margin-left: 30px;
@@ -186,7 +186,7 @@ body.lightmode {
     border-radius: 5px;
     transform: scale(1.2);
 }
-
+/* inicio da main onde fica o sapo fumante*/
 .conteudo-principal {
     max-width: 100%;
     margin: 40px;
@@ -201,14 +201,14 @@ body.lightmode {
     align-items: center;
     margin-bottom: 80px;
 }
-
+/* balao de fala */
 .coluna-central {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 60px;
 }
-
+/* parte do radar  */
 .coluna-radar {
     font-family: 'Silkscreen', sans-serif;
     color: var(--neon-principal);
@@ -223,7 +223,7 @@ h2 {
     font-family: 'Silkscreen' , sans-serif;
     color: var(--cor-h2dosobre);
 }
-
+/* layout do meio da main */
 .layout-split {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -231,7 +231,7 @@ h2 {
     align-items: stretch;
     margin-bottom: 100px;
 }
-
+/* parte onde cita sobre o jogo */
 .sobre {
     flex: 2;
     background-color: var(--fundo-dark);
@@ -252,7 +252,7 @@ h2 {
     color: var(--neon-suave);
     max-width: 800px;
 }
-
+/* coluna do meio onde está varios status */
 .status-mundo {
     color: var(--neon-principal);
     flex: 1;
@@ -268,7 +268,7 @@ h2 {
     margin-bottom: 20px;
     border-bottom: 1px solid var(--neon-principal);
 }
-
+/* barra de sttatus */
 .barra {
     width: 100%;
     height: 10px;
@@ -281,14 +281,14 @@ h2 {
     background-color: var(--neon-principal);
     box-shadow: 0 0 10px var(--neon-principal);
 }
-
+/* mensagem de alerta abaixo das barras */
 .alerta {
     color: var(--color-alerta); /* Um vermelho pra constraste de aviso */
     font-weight: bold;
     margin-top: 20px;
     font-size: 0.8rem;
 }
-
+/* log de noticias onde ficam as 5 variaveis da rubrica do prof douglas */
 .log-grime {
     max-width: 100%;
     overflow-x: hidden;
@@ -302,7 +302,7 @@ h2 {
     white-space: normal;
     margin-bottom: 8px;
 }
-
+/* coluna onde fica a imagem do cisne */
 .conteudo-procurado {
     flex: 1;
     border: 1px solid var(--borda-procurado);
@@ -317,7 +317,7 @@ h2 {
     margin-bottom: 20px;
     border-bottom: 1px solid var(--linha-h3);
 }
-
+/* parte da imagem do cisne dentro da div */
 .imagemcisne {
     width: 100%;
     max-width: 350px;
@@ -333,7 +333,7 @@ h2 {
     object-fit: contain;
     display: block;
 }
-
+/* texto abaixo da imagem */
 .perfil-criminoso {
     font-family: "Spacemono" , monospace;
     text-align: center;
@@ -359,7 +359,7 @@ h2 {
 .bio-cisne p, h4{
     color: var(--neon-suave);
 }
-
+/* parte da animação do sapo fumante */
 .imagem-caos {
     width: 100%;
     height: auto;
@@ -375,7 +375,7 @@ h2 {
         filter: drop-shadow(0 0 25px rgba(255, 255, 0, 0.85));
     }
 }
-
+/* parte onde esta escrito sobre o moletom */
 .balao-fala {
     position: relative;
     background-color: var(--fundo-negro);
@@ -393,7 +393,7 @@ h2 {
     line-height: 1.8;
     text-transform: uppercase;
 }
-
+/*  botao  de jogar  utilizado na pagina inicial e nas outras paginas */
 .botao-caos {
     display: flex; /* faz o link se comportar como um bloco*/
     width: 100%;
@@ -425,7 +425,7 @@ h2 {
     transform: scale(0.98);
     box-shadow: 0 0 10px var(--cor-hover-menu);
 }
-
+/* parte da animação do radar */
 .radar-ponto {
     width: 112px;
     height: 113px;
@@ -456,7 +456,7 @@ h2 {
         transform: rotate(360deg);
     }
 }
-
+/* parte do login */
 .modal {
     display: none;
     position: fixed;
@@ -542,7 +542,7 @@ h2 {
     color: #fff;
     text-shadow: 0 0 10px var(--neon-principal);
 }
-
+ /* parte do rodapé do site */
 footer {
     width: 100%;
     display: flex;
@@ -563,7 +563,7 @@ footer p {
     letter-spacing: 1px;
     margin: 0;
 }
-
+ /* parte responsiva com medida de 768px */
 @media screen and (max-width: 768px) {
     .ajusteprimeiraparte, .layout-split {
         display: flex !important;

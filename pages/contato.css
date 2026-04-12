@@ -80,7 +80,7 @@
     transform: scale(1.1);
     transition: 0.3s;
 }
-
+/* inicio da main onde esta a classe dos containers */
 .container-contato {
     padding-top: 140px;
     padding-bottom: 80px;
@@ -91,7 +91,7 @@
     width: 100%;
     scroll-margin-top: -115px;
 }
-
+/* grid que vai abrigar as duas caixas de contato */
 .grid-contato {
     display: flex;
     flex-wrap: wrap;
@@ -101,14 +101,14 @@
     justify-content: center;
     margin: 20px auto;
 }
-
+/* titulo ue mostra protocolo de comunicao */
 .titulo-sessao {
     font-size: 2rem;
     margin-bottom: 20px;
     width: 100%;
     text-align: center;
 }
-
+/* estilizando as duas section (as 2 caixas que contem as informações) */
 .caixa-informativa, .caixa-feedback {
     font-family: 'Spacemono', monospace;
     background-color: var(--fundo-infofeed);
@@ -121,7 +121,7 @@
     max-width: 450px;
     color: var(--neon-principal);
 }
-
+/* titulo onde diz meu nome */
 .subtitulo-caixa {
     font-family: 'Silkscreen', sans-serif;
     color: var(--neon-principal);
@@ -130,13 +130,13 @@
     border-bottom: 1px solid var(--sombra-botao);
     padding-bottom: 10px;
 }
-
+/* parte do formulario */
 .formulario-contato {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-
+/* estilizando o input do formlario */
 .formulario-contato input, .formulario-contato textarea {
     background: #000;
     border: 1px solid #333;
@@ -149,7 +149,7 @@
 .formulario-contato input:focus {
     border-color: var(--sombra-botao);
 }
-
+/* botao que envia o feedback */
 .botao-contato {
     width: 100% !important;
     height: 45px !important;
@@ -166,7 +166,7 @@
     display: flex;
     justify-content: center;
 }
-
+/* parte responsiva */
 @media screen and (max-width: 768px) {
 
     * {
